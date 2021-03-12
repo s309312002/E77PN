@@ -1,0 +1,53 @@
+﻿@model E7PNN.Models.UserTb
+
+<!-- 側邊攔 Sidebar Column -->
+@*<div>
+    <div class="list-group ">
+        <a href="@Url.Action("Member","Member")" class="list-group-item active"><i class="icofont-home"></i>會員首頁</a>
+        <a href="@Url.Action("MemberEdit","Member")" class="list-group-item"><i class="icofont-birthday-cake"></i>修改資料</a>
+        <a href="@Url.Action("MePassword","Member")" class="list-group-item"><i class="icofont-key"></i>修改密碼</a>
+        <a href="@Url.Action("MemberEvent","Member")" class="list-group-item"><i class="icofont-bullhorn"></i>活動管理</a>
+        <a href="@Url.Action("MemberMessy","Member")" class="list-group-item"><i class="icofont-alarm"></i>通報管理</a>
+        <a href="@Url.Action("MePoints","Member")" class="list-group-item"><i class="icofont-gift"></i>積分兌換</a>
+
+    </div>
+
+</div>*@
+
+<!-- 選擇分類按鈕 -->
+
+<div class="select-btn  mb-4  align-center">
+
+
+
+    <div class="btn-group btn-group-toggle btn-group-vertical" data-toggle="buttons">
+        <a class="mb-3 btn btn-outline-info btn-md active" href="@Url.Action("Member","Member")">
+            <input id="btn-all" name="options" type="radio" data-rel="all"><i class="icofont-home"></i>會員首頁
+        </a>
+
+        <a class="mb-3 btn btn-outline-info btn-md " href="@Url.Action("MemberEdit","Member")">
+            <input id="btn-beach" name="options" type="radio" autocomplete="off">
+            <i class="icofont-birthday-cake"></i>修改資料
+        </a>
+        <a class="mb-3 btn btn-outline-info btn-md " href="@Url.Action("MePassword","Member")">
+            <input id="btn-mountain" name="options" type="radio" 
+                   autocomplete="off"><i class="icofont-key"></i>修改密碼
+        </a>
+        <a class="mb-3 btn btn-outline-info btn-md " href="@Url.Action("MemberEvent","Member")">
+            <input id="btn-road" name="options"
+                   type="radio"  autocomplete="off"><i class="icofont-bullhorn"></i>活動管理
+        </a>
+        <a class="mb-3 btn btn-outline-info btn-md " href="@Url.Action("MemberMessy","Member")">
+            <input id="btn-road" name="options"
+                   type="radio"  autocomplete="off"><i class="icofont-alarm"></i>通報管理
+        </a>
+        <a class="mb-3 btn btn-outline-info btn-md " href="@Url.Action("MePoints","Member")">
+            <input id="btn-road" name="options"
+                   type="radio"  autocomplete="off"><i class="icofont-gift"></i>積分兌換
+        </a>
+
+    </div>
+    
+
+
+</div>

@@ -1,0 +1,247 @@
+body {
+    font-family: 'Noto Sans TC', sans-serif;
+    margin:0;
+    background-color: #165873;
+}
+.bg{
+    background-image: url(../images/loginBac.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    height:800px;
+
+}
+
+.bg-blur{
+    float: left;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            -webkit-filter: blur(15px);
+            -moz-filter: blur(15px);
+            -o-filter: blur(15px);
+            -ms-filter: blur(15px);
+            filter: blur(15px);}
+  /*中間的過度的橫線 或*/
+ 
+
+
+
+/* 註冊box */
+
+.frame {
+    width: 400px;
+  
+    padding: 2%;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -200px;
+    margin-top: -200px;
+    
+    background-color: white;
+    box-shadow:0px 5px 20px #165873;
+    border-radius: 0px 50px 0px 0px;
+    text-align: center;
+}
+
+
+/* logo */
+#image_logo {
+    display: inline-block;
+    overflow: hidden;
+    width:20%;
+}
+
+/* 第三方註冊按鈕 */
+/* 第三方註冊按鈕 facebook*/
+.btn_signup_facebook {
+    font-size: 1rem;
+    font-family: 'Noto Sans TC', sans-serif;
+    width: 100%;
+    line-height: 3;
+    margin: 2% 0;
+    text-align: center;
+    color: white;
+    background: #1185d2;
+    border-radius: 50px;
+    border: 0;
+    float: left;
+
+}
+.btn_signup_facebook:hover {
+   
+    color: white;
+    background:#165873;
+}
+/* 第三方註冊按鈕 google */
+.btn_signup_google {
+    font-size: 1em;
+    line-height: 3;
+    border: 0.5 #165873;
+    width: 100%;
+    margin: 5% 0;
+    text-align: center;
+    color: #165873;
+    background-color: white;
+    border-radius: 50px;
+    float: left;
+}
+
+.btn_signup_google:hover {
+   
+    color: white;
+    background:#165873;
+}
+
+
+
+
+/* 註冊表單
+表單參考https://css-tricks.com/float-labels-css/ */
+
+form {
+    margin: 2em 0;
+}
+
+/**
+* Make the field a flex-container, reverse the order so label is on top.
+*/
+
+.field {
+    display: flex;
+    flex-flow: column-reverse;
+    margin-bottom: 1em;
+}
+
+/**
+* Add a transition to the label and input.
+* I'm not even sure that touch-action: manipulation works on
+* inputs, but hey, it's new and cool and could remove the 
+* pesky delay.
+*/
+label,
+input {
+    transition: all 0.2s;
+    touch-action: manipulation;
+    background-color: transparent;
+}
+
+input {
+    font-size: 1em;
+    line-height: 2;
+    border: 0;
+    border-bottom: 1px solid #9DB6C5;
+    font-family: inherit;
+    -webkit-appearance: none;
+    border-radius: 0;
+    padding: 0;
+    cursor: text;
+}
+
+input:focus {
+    outline: 0;
+    border-bottom: 1px solid #165873;
+}
+
+label {
+    /* text-transform: uppercase; */
+    color: #9DB6C5;
+    /* letter-spacing: 0.1em; */
+}
+
+
+/**
+* Translate down and scale the label up to cover the placeholder,
+* when following an input (with placeholder-shown support).
+* Also make sure the label is only on one row, at max 2/3rds of the
+* field—to make sure it scales properly and doesn't wrap.
+*/
+input:placeholder-shown+label {
+
+    cursor: text;
+    max-width: 10%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transform-origin: left bottom;
+    transform: translate(0, 2rem);
+}
+
+/**
+* By default, the placeholder should be transparent. Also, it should 
+* inherit the transition.
+*/
+::-webkit-input-placeholder {
+    color: #9DB6C5;
+    opacity: 0;
+    transition: inherit;
+   
+}
+
+/**
+* Show the placeholder when the input is focused.
+*/
+input:focus::-webkit-input-placeholder {
+    opacity: 1;
+}
+
+/**
+* When the element is focused, remove the label transform.
+* Also, do this when the placeholder is _not_ shown, i.e. when 
+* there's something in the input at all.
+*/
+input:not(:placeholder-shown)+label,
+input:focus+label {
+    color: #165873;
+    transform: translate(0, 0) ;
+    cursor: pointer;
+}
+/* 註冊按鈕  */
+
+.btn_signup {
+    font-size: 1em;
+    line-height: 3;
+    border: 0;
+    width: 100%;
+    margin: 5% 0;
+    text-align: center;
+    color: white;
+    background-color: #165873;
+    border-radius: 50px;
+    float: left;
+}
+.btn_signup:hover {
+   
+    color: white;
+    background: #2D9EB7;
+}
+
+/* 登入 */
+.btn_login{
+    font-size: 0.5em;
+    line-height: 3;
+    width: 100%;
+
+    text-align: center;
+    float: left;
+    color: #2D9EB7;
+    border:0;
+    background-color:transparent;
+}
+
+
+/* 個資 */
+    a{
+        color: #9DB6C5;
+    }
+p{
+    font-size: 0.5em;
+    line-height: 3;
+    width: 100%;
+
+    text-align: center;
+    color: #9DB6C5;
+  
+}

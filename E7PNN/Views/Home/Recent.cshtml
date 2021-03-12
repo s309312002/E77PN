@@ -1,0 +1,108 @@
+﻿@model IEnumerable<E7PNN.Models.Activity>
+
+
+
+
+
+
+
+<!-- 近期活動 Section-->
+<section id="event" class="event">
+    <div class="container">
+        <h2 class="text-center section-title" data-aos="fade-up">近期活動</h2>
+
+        <div class="card-columns " data-aos="fade-up">
+            @foreach (var item in Model)
+            {
+                <div class="card">
+                    <div class="card-header row">
+                        <div class="col-2">
+                            <i class="icofont-hill" style="font-size: 4em;"></i>
+                        </div>
+                        <div class="col-10">
+                            <h3 class="card-title">@Html.DisplayFor(modelItem => item.ActName)</h3>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            <i class="icofont-location-pin"></i>@Html.DisplayFor(modelItem => item.ActSite)
+                        </p>
+                        <p class="card-text">
+                            <i class="icofont-clock-time"></i>@Html.DisplayFor(modelItem => item.ActTime)
+                        </p>
+                        <p class="card-text">
+                            <i class="icofont-search-user"></i>@Html.DisplayFor(modelItem => item.SumPeople)
+                        </p>
+                    </div>
+
+
+                </div>
+            }
+
+        </div>
+        <div class="mt-5" data-aos="fade-left">
+            <a type="button" href="@Url.Action("JoinEvent","JoinEvent")" class="btn btn-info btn-lg btn-block">更多活動</a>
+        </div>
+
+        @*<div class="card col-lg-4 col-md-6">
+
+
+
+        <!-- 近期活動 Section-->
+        <section id="event" class="event">
+            <h2 class="text-center">近期活動</h2>
+
+            <div class="card-deck">
+                @foreach (var item in Model)
+                {
+                    <div class="card col-lg-4 col-md-6">
+                        <div class="card-header">
+                            <h3 class="card-title">@Html.DisplayFor(modelItem => item.ActName)</h3>
+
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">
+                                <i class="icofont-location-pin"></i>@Html.DisplayFor(modelItem => item.ActSite)
+                            </p>
+                            <p class="card-text">
+                                <i class="icofont-clock-time"></i>@Html.DisplayFor(modelItem => item.ActTime)
+                            </p>
+                            <p class="card-text">
+                                <i class="icofont-search-user"></i>@Html.DisplayFor(modelItem => item.SumPeople)
+                            </p>
+                        </div>
+                        @*<div class="card-body text-center">
+
+                            <a class="col-4 card-link" href="@Url.Action("Events", "JoinEvent", new {id = item.ID })"><i class="align-center icofont-plus-circle"></i></a>
+                            <a class="col-4 card-link" href="@Url.Action("Events", "JoinEvent", new {id = item.ID })"><i class="icofont-info"></i></a>
+
+                        </div>*@
+
+
+
+
+        @*<div class="card col-lg-4 col-md-6">
+
+        <div class="card-header">
+            <h3 class="card-title">活動標題活動標題2</h3>
+            <h6 class="card-subtitle mb-2 text-muted">10天前</h6>
+        </div>
+        <div class="card-body">
+            <p class="card-text"><i class="icofont-location-pin"></i>新北市龍洞站-鼻頭角步道</p>
+            <p class="card-text"><i class="icofont-clock-time"></i>2021年01月14日 13:00-14:00</p>
+            <p class="card-text"><i class="icofont-search-user"></i>20/20</p>
+        </div>
+        <div class="card-body text-center">
+            <a class="col-4 card-link" href="#"><i class="align-center icofont-plus-circle"></i></a>
+            <a class="col-4 card-link" href="#"><i class="icofont-envelope"></i></a>
+            <a class="col-4 card-link" href="#"><i class="icofont-info"></i></a>
+
+        </div>
+        *@
+
+
+
+
+
+    </div>
+    </section>

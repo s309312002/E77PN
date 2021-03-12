@@ -1,0 +1,297 @@
+﻿@model E7PNN.Models.ViewModel.EditActivityVm
+@{
+    ViewBag.Title = "ApplyEventsFast";
+}
+
+<!-- Page Content -->
+<div class="container">
+
+    <div class="content-header row">
+        <div class="content-header-left col-md-4 col-12 mb-2">
+            <h3 class="content-header-title">00000</h3>
+        </div>
+    </div>
+
+    <!-- Content Row -->
+    <div class="row mt-5">
+
+        <!-- 創建活動-表單 -->
+        <div class="contnet2 col-12 col-md-8 mb-4 p-5">
+
+            <h2 class="text-center">
+                <i class="icofont-rabbit"></i>快速揪團
+            </h2>
+
+            @using (Html.BeginForm("ApplyEventsFast", "Applyevent", FormMethod.Post, new { @role = "form" }))
+            {
+                
+                @*@Html.TextBoxFor(m => m.ActLong, new { @Name = "ActLong" })
+            @Html.TextBoxFor(m => m.ActLat, new { @Name = "ActLat" })*@
+
+                @*<form action="~/Applyevent/ApplyEventsFast" method="post" role="form" class="">*@
+
+                <!-- 選擇分類：淨灘／淨山／淨路 -->
+                <div class="form-group p-2">
+                    <div class="form-row">
+                        <div class="col-12">
+                            <h4 class="form-row-title">
+                                <i class="icofont-location-pin"></i>請選擇活動分類
+                            </h4>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="inputRealName" class="col-sm-3 col-form-label">
+                            活動分類
+                        </label>
+                        <div class="col-sm-9">
+                            @Html.DropDownListFor(m => m.ActType, (IEnumerable<SelectListItem>)ViewBag.SelectType, new { @Name = "ActType", @class = "custom-select" })
+                            @*<select class="custom-select" name="ActType">
+                            <option value="1">淨灘</option>
+                            <option value="2">淨山</option>
+                            <option value="3">淨路</option>
+
+                        </select>*@
+                        </div>
+                        <div class="invalid-feedback">
+
+                        </div>
+
+
+                    </div>
+                </div>
+                <!-- 地點 -->
+                <div class="form-group p-2">
+                    <div class="form-row">
+                        <div class="col-12">
+                            <h4 class="form-row-title">
+                                <i class="icofont-location-pin"></i>請選擇要清理的地點
+                            </h4>
+                        </div>
+                    </div>
+                    <!-- 淨山:風景區 淨灘:縣市 淨路:縣市 -->
+                    @*<div class="form-group row">
+                    <label for="inputRealName" class="col-sm-3 col-form-label">風景區</label>
+                    <div class="col-sm-9">
+                        <select class="custom-select" name="Area">
+                            <option value="1">風景區1</option>
+                            <option value="2">風景區2</option>
+                            <option value="3">風景區3</option>
+                            <option value="4">風景區4</option>
+                            <option value="5">風景區5</option>
+                            <option value="6">風景區6</option>
+                            <option value="7">風景區7</option>
+
+
+                        </select>
+                    </div>
+                    <div class="invalid-feedback">
+
+                    </div>
+
+
+                </div>*@
+                    <div class="form-group row">
+                        <label for="inputRealName" class="col-sm-3 col-form-label">地點</label>
+                        <div class="col-sm-9">
+                            @Html.DropDownListFor(m => m.ActSite, (IEnumerable<SelectListItem>)ViewBag.SelectSite, new { @Name = "ActSite", @class = "custom-select" })
+                            @*<select class="custom-select" name="ActSite">
+
+                            <option value="１">新北白沙灣</option>
+                            <option value="2">新竹幸福沙灣</option>
+                            <option value="3">宜蘭外澳沙灘</option>
+                            <option value="4">宜蘭南澳神秘沙灘</option>
+                            <option value="5">花蓮北濱公園</option>
+                        </select>*@
+                        </div>
+                        <div class="invalid-feedback">
+
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+
+
+                <!-- 申請資料 -->
+                <div class="form-group p-2">
+                    <div class="form-row">
+                        <div class="col-12">
+                            <h4 class="form-row-title">
+                                <i class="icofont-bullhorn"></i>請填寫活動申請資料
+                            </h4>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="inputEventDay" class="col-sm-3 col-form-label">活動日期</label>
+                        <div class="col-sm-9">
+                            @Html.TextBoxFor(m => m.ActTime, new { @Name = "ActTime", @class = "form-control is-valid", @type = "date" })
+
+                            @*<input type="date" class="form-control is-valid" id="inputEventDay" value="" name="ActTime">*@
+                        </div>
+
+
+
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="inputTimeStart" class="col-sm-3 col-form-label">活動開始時間</label>
+                        <div class="col-sm-9">
+                            @Html.TextBoxFor(m => m.StarTime, new { @Name = "StarTime", @class = "form-control is-valid", @type = "time" })
+
+                            @*<input type="time" class="form-control is-valid" id="inputTimeStart" value="" name="StarTime">*@
+                            <div class="invalid-feedback">
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="inputTimeEnd" class="col-sm-3 col-form-label">活動結束時間</label>
+                        <div class="col-sm-9">
+                            @Html.TextBoxFor(m => m.EndTime, new { @Name = "EndTime", @class = "form-control is-valid", @type = "time" })
+
+                            @*<input type="time" class="form-control is-valid" id="inputTimeEnd" value="" name="EndTime">*@
+                            <div class="invalid-feedback">
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="inputRealName" class="col-sm-3 col-form-label">參與人數</label>
+                        <div class="col-sm-9">
+                            @Html.TextBoxFor(m => m.SumPeople, new { @Name = "SumPeople", @class = "form-control is-valid", @type = "number", @min = "2", @max = "100" })
+
+                            @*<input type="number" class="form-control is-valid" name="SumPeople" min="2" max="100" />*@
+                        </div>
+                        <div class="invalid-feedback">
+
+                        </div>
+
+
+                    </div>
+
+
+
+                </div>
+                <!-- 聯絡資料 -->
+                <div class="form-group p-2">
+                    <div class="form-row">
+                        <div class="col-12">
+                            <h4 class="form-row-title">
+                                <i class="icofont-user-alt-7"></i>請填寫聯絡資料
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputPhoneNumber" class="col-sm-3 col-form-label">聯絡電話</label>
+                        <div class="col-sm-9">
+                            @Html.TextBoxFor(m => m.Number, new { @Name = "Number", @class = "form-control is-valid", @type = "tel", @placeholder = "請輸入手機號碼" })
+
+                            @*<input type="tel" class="form-control is-valid" id="inputPhoneNumber"
+                        placeholder="請輸入手機號碼" value="" name="Number">*@
+
+                        </div>
+
+
+
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="inputEmail" class="col-sm-3 col-form-label">聯絡信箱</label>
+                        <div class="col-sm-9">
+                            @Html.TextBoxFor(m => m.Email, new { @Name = "Email", @class = "form-control is-valid", @type = "email", @placeholder = "請輸入聯絡信箱" })
+
+                            @*<input type="email" class="form-control is-valid" id="inputEmail"
+                        placeholder="請輸入聯絡信箱" value="" name="Email">*@
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <!-- 活動標題說明等等 -->
+                <div class="form-group p-2">
+                    <div class="form-row">
+                        <div class="col-12">
+                            <h4 class="form-row-title">
+                                <i class="icofont-info"></i>請輸入活動標題與活動說明
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputEvevtSubject" class="col-sm-3 col-form-label">活動標題</label>
+                        <div class="col-sm-9">
+                            @Html.TextBoxFor(m => m.ActName, new { @Name = "ActName", @class = "form-control is-valid", @placeholder = "請輸入活動標題" })
+
+                            @*<input type="text" class="form-control is-valid" id="inputEvevtSubject"
+                        placeholder="請輸入活動標題" value="" name="ActName">*@
+                        </div>
+                        <div class="invalid-feedback">
+
+                        </div>
+
+
+                    </div>
+
+                    @*<div class="form-group row">
+                    <label for="inputLocation" class=" col-sm-3 col-form-label">集合地點</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control is-valid" id="inputRealName"
+                               placeholder="請輸入集合地點" value="" name="Gather">
+                    </div>
+                    <div class="invalid-feedback">
+
+                    </div>
+
+
+                </div>*@
+                    <div class="form-group row">
+                        <label for="inputOther" class="col-sm-3 col-form-label">活動說明</label>
+                        <div class="col-sm-9">
+                            @Html.TextAreaFor(m => m.Text, new { @Name = "Text", @class = "form-control is-valid", @placeholder = "請輸入活動說明", @rows = "5" })
+
+                            @*<textarea type="text" class="form-control is-valid" id="inputOther" rows="5"
+                        placeholder="請輸入活動說明" value="" name="Text"></textarea>*@
+                        </div>
+                        <div class="invalid-feedback">
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+                <div class="form-group p-2">
+                    <button type="submit" class="btn btn-lg btn-block btn-outline-info" value="ApplyEventsFast">送出</button>
+                </div>
+
+                @*</form>*@
+            }
+        </div>
+
+
+
+
+
+
+
+        <!-- 創建活動-淨山-說明文字 -->
+        <!-- 活動申請流程 -->
+        <div class=" col-12 col-md-4 mb-4 p-5 ">
+            @{
+                Html.RenderAction("applytextFast");
+            }
+        </div>
+
+    </div>
+</div>
+<!-- /.row -->

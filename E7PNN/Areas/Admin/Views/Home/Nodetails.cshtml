@@ -1,0 +1,113 @@
+﻿@model E7PNN.Models.Activity
+@{
+    ViewBag.Title = "Nodetails";
+}
+
+<div class="content-wrapper">
+    <div class="content-wrapper-before"></div>
+    <div class="content-header row">
+        <div class="content-header-left col-md-4 col-12 mb-2">
+            <h3 class="content-header-title">活動詳細資料</h3>
+        </div>
+        <div class="content-header-right col-md-8 col-12">
+            <div class="breadcrumbs-top float-md-right">
+                <div class="breadcrumb-wrapper mr-1">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href='@Url.Action("YearsSummary", "Home")'>活動詳細資料</a>
+                        </li>
+                        <li class="breadcrumb-item active">
+                            活動詳細資料
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 未審核詳細資料 start -->
+    <div class="row">
+        <div class="col-12">
+            <div class="card" style="max-width:600px;text-align:center;font-weight:700;margin:auto;">
+                <div class="card-header">
+                    <h4 class="card-title">詳細資料</h4>
+                    <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                    <div class="heading-elements">
+                        <ul class="list-inline mb-0">
+                            <li>
+                                <a data-action="collapse"><i class="ft-minus"></i></a>
+                            </li>
+                            <li>
+                                <a data-action="reload"><i class="ft-rotate-cw"></i></a>
+                            </li>
+                            <li>
+                                <a data-action="expand"><i class="ft-maximize"></i></a>
+                            </li>
+                            <li>
+                                <a data-action="close"><i class="ft-x"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-content collapse show">
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead class="thead">
+                                <tr>
+                                    <td>@Html.DisplayNameFor(modelItem => modelItem.ID)</td>
+                                    <td>@Html.DisplayFor(modelItem => modelItem.ID)</td>
+                                </tr>
+                                <tr>
+                                    <td>@Html.DisplayNameFor(modelItem => modelItem.ActName)</td>
+                                    <td>@Html.DisplayFor(modelItem => modelItem.ActName)</td>
+                                </tr>
+                                <tr>
+                                    <td>@Html.DisplayNameFor(modelItem => modelItem.ActUser)</td>
+                                    <td>@Html.DisplayFor(modelItem => modelItem.ActUser)</td>
+                                </tr>
+                                <tr>
+                                    <td>@Html.DisplayNameFor(modelItem => modelItem.ActSite)</td>
+                                    <td>@Html.DisplayFor(modelItem => modelItem.ActSite)</td>
+                                </tr>
+                                <tr>
+                                    <td>@Html.DisplayNameFor(modelItem => modelItem.ActTime)</td>
+                                    <td>@Html.DisplayFor(modelItem => modelItem.ActTime)</td>
+                                </tr>
+                                <tr>
+                                    <td>@Html.DisplayNameFor(modelItem => modelItem.ActType)</td>
+                                    <td>@Html.DisplayFor(modelItem => modelItem.ActType)</td>
+                                </tr>
+                                <tr>
+                                    <td>@Html.DisplayNameFor(modelItem => modelItem.SumPeople)</td>
+                                    <td>@Html.DisplayFor(modelItem => modelItem.SumPeople)</td>
+                                </tr>
+                                <tr>
+                                    <td>@Html.DisplayNameFor(modelItem => modelItem.ActText)</td>
+                                    <td>@Html.DisplayFor(modelItem => modelItem.ActText)</td>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+                <div>
+                    <p>
+                        <div>
+                            <button style="background-color: #0D2340;">審核通過</button>
+
+                            <button style="background-color: #0D2340;">審核未通過</button>
+
+                            <select class="form col-5">
+                                <option value="" selected>請選擇審核未通過原因</option>
+                                <option value="1">人數過少</option>
+                                <option value="2">主辦人資訊未確實填寫</option>
+                                <option value="3">集合地點不明確</option>
+                            </select>
+                        </div>
+                        <br />
+                        <i class='la la-external-link'></i>@Html.ActionLink("回上一頁", "YearsSummary")
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 未審核詳細資料 end -->
+</div>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/signup.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <script type="text/javascript" src="signup.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"
+        integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+"
+        crossorigin="anonymous"></script>
+
+
+    <title>SignUp</title>
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <div class="bg bg-blur"></div>
+    <div class="frame">
+
+        <div id="image_logo">
+            <a href="index.html"> <img src="images/logo.svg"></a>
+        </div>
+
+
+        <!-- 註冊表單 使用信箱密碼 -->
+        <form id="form_signup" action="#" method="post">
+            <div class="field">
+                <input required type="text" name="fullname" id="fullname" placeholder="王小明（務必輸入真實姓名）" autocomplete="on"
+                    value="">
+                <label for="email">姓名</label>
+            </div>
+            <div class="field">
+                <input required type="email" name="email" id="email" placeholder="e7pn@example.com" autocomplete="on"
+                    value="">
+                <label for="email">信箱</label>
+            </div>
+
+            <div class="field">
+                <input required type="password" name="password" id="password" placeholder="輸入密碼" autocomplete="on"
+                    value="" minlength="8">
+                <label for="password">密碼</label>
+            </div>
+            <div class="field">
+
+                <input type="password" name="password" id="password_pass" placeholder="再次輸入密碼" required="" value="">
+                <label for="password">密碼</label>
+            </div>
+
+
+
+            <button class="btn_signup" type="submit" value="signup">
+                註冊
+            </button>
+
+        </form>
+
+        <!-- 登入 -->
+
+        <button class="btn_login" type="login" value="login" onclick="window.location='login.html'">已經有帳號了嗎？點此登入</button>
+        <!-- 個資協議 -->
+        <p>註冊/登入即代表您同意遵守 <a href="terms.html">E7PN 使用協議</a></label>
+        </p>
+
+
+
+
+
+
+    </div>
+
+</body>
+
+
+
+</html>

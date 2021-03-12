@@ -1,0 +1,159 @@
+﻿@model IEnumerable<E7PNN.Models.Activity>
+
+
+@{
+    ViewBag.Title = "JoinEvent";
+}
+
+<!-- Page Content -->
+<div class="container">
+
+    <section>
+
+        <!-- Content Row -->
+        <div class="row">
+
+            <!-- 選擇分類按鈕 -->
+
+            <div class="select-btn col-12 col-md-2 mb-4 p-5 align-center">
+
+
+
+                <div class="btn-group btn-group-toggle btn-group-vertical" data-toggle="buttons">
+                    <label class="mb-3 btn btn-outline-info btn-md active">
+                        <input id="btn-all" name="options" type="radio" data-rel="all"><i class="icofont-bullhorn"></i>全部
+                    </label>
+
+                    <label class="mb-3 btn btn-outline-info btn-md ">
+                        <input id="btn-beach" name="options" type="radio" data-rel="beach" autocomplete="off">
+                        <i class="icofont-beach-bed"></i>淨灘
+                    </label>
+                    <label class="mb-3 btn btn-outline-info btn-md ">
+                        <input id="btn-mountain" name="options" type="radio" data-rel="mountain"
+                               autocomplete="off"><i class="icofont-hill"></i>淨山
+                    </label>
+                    <label class="mb-3 btn btn-outline-info btn-md ">
+                        <input id="btn-road" name="options"
+                               type="radio" data-rel="road" autocomplete="off"><i class="icofont-road"></i>淨路
+                    </label>
+
+                </div>
+                <!-- 時間 -->
+                <!-- 時間箭頭往上(舊-新)  點了按鈕變成箭頭往下(新-舊)-->
+                <!-- <button type="button" id="arrow-up" onclick="newTime" style="visibility: visible;"
+                    class="mb-3 btn btn-outline-info btn-md " data-toggle="button" aria-pressed="true"
+                    autocomplete="off"><i class="icofont-clock-time"></i><i class="icofont-arrow-up"></i></button> -->
+                <!-- 時間箭頭往上(新-舊) -->
+                <!-- <button type="button" id="arrow-down" onclick="oldTime" style="visibility: hidden;"
+                    class="mb-3 btn btn-outline-info btn-md " data-toggle="button" aria-pressed="true"
+                    autocomplete="off"><i class="icofont-clock-time"></i><i class="icofont-arrow-down"></i></button> -->
+
+
+
+            </div>
+
+            <!--加入活動 卡片區域 02/25 改卡片樣式-->
+            <div class="contnet2 col-12 col-md-10 mb-4 ">
+
+
+                <div class="card-columns " data-aos="fade-up">
+                    @foreach (var item in Model)
+                    {
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">@Html.DisplayFor(modelItem => item.ActName)</h3>
+
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">
+                                    <i class="icofont-location-pin"></i>@Html.DisplayFor(modelItem => item.ActSite)
+                                </p>
+                                <p class="card-text">
+                                    <i class="icofont-clock-time"></i>@Html.DisplayFor(modelItem => item.ActTime)
+                                </p>
+                                <p class="card-text">
+                                    <i class="icofont-search-user"></i>@Html.DisplayFor(modelItem => item.SumPeople)
+                                </p>
+                            </div>
+
+
+                            <div class="card-link">
+
+                                <a href="@Url.Action("MemberEvent", "Member", new {id = item.ID })" type="button" class="btn btn-md btn-outline-info  btn-circle">
+                                    <i class="align-center icofont-plus"></i>
+
+                                </a>
+                                <a href="@Url.Action("Events", "JoinEvent", new {id = item.ID })" type="button" class="btn btn-md btn-outline-info  btn-circle">
+                                    <i class="icofont-info"></i>
+
+                                </a>
+
+                            </div>
+
+
+                        </div>
+                    }
+                </div>
+
+
+                <!-- 分頁按鈕 -->
+                <div class="m-5">
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">1</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">2</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">3</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">4</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">5</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">6</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">7</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">8</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">9</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+
+                            </li>
+                        </ul>
+                    </nav>
+
+                </div>
+
+
+
+
+
+
+            </div>
+        </div>
+        <!-- /.row -->
+    </section>
+
+
+
+</div>
+<!-- /.container -->

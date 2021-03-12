@@ -1,0 +1,728 @@
+
+body {
+  /* padding-top: 50px; */
+}
+
+/* Reset */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* type */
+
+body {
+  background-color: rgb(249, 254, 255);
+  
+}
+
+body, input, select, textarea {
+  font-family: "Noto Sans CJK TC", Arial;
+  font-size: 10pt;
+  font-weight: 400;
+  line-height: 2em;
+}
+
+a {
+  text-decoration: none;
+  color: #165873;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #2D9EB7;
+}
+
+strong, b {
+  color: #165873;
+  font-weight: 700;
+}
+
+em, i {
+  font-style: italic;
+}
+
+p {
+  margin: 0 0 1em 0;
+  font-size: 1.1em;
+  letter-spacing: 0.03em;
+  font-weight: 200;
+}
+
+
+.text-muted{
+  letter-spacing: 0.01em;
+  font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #165873;
+  font-weight: 500;
+margin:0.1em 0;
+  text-transform: uppercase;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  color: #2D9EB7;
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 2.5em;
+  line-height: 1.5em;
+}
+
+h3 {
+  font-size: 1.35em;
+  line-height: 1.5em;
+  letter-spacing: 0.02em;
+  font-weight: 300;
+}
+
+h4 {
+  font-size: 1.2em;
+  letter-spacing: 0.02em;
+  font-weight: 300;
+  line-height: 2em;
+}
+
+h5 {
+  font-size: 0.9em;
+  line-height: 1.5em;
+}
+
+h6 {
+  font-size: 0.7em;
+  line-height: 3em;
+}
+
+
+
+
+pre {
+  -webkit-overflow-scrolling: touch;
+  font-family: "Courier New", monospace;
+  font-size: 0.9em;
+  margin: 0 0 2em 0;
+}
+
+pre code {
+  display: block;
+  line-height: 1.75;
+  padding: 1em 1.5em;
+  overflow-x: auto;
+}
+
+hr {
+  border: 0;
+  border-bottom: solid 1px rgba(144, 144, 144, 0.25);
+  margin: 2em 0;
+}
+
+hr.major {
+  margin: 3em 0;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.align-right {
+  text-align: right;
+}
+
+
+
+/* scrollbar */
+
+/* scrollbar width */
+
+::-webkit-scrollbar {
+  width: 16px;
+  shadow: 0 0 5px grey; 
+}
+
+/* scrollbar Track */
+
+/* ::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+} */
+
+/* scrollbar Handle */
+
+::-webkit-scrollbar-thumb {
+  background: #165873;
+  border-radius: 100px;
+}
+
+/* scrollbar Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2D9EB7;
+}
+
+span {
+  margin-right: 0.5em;
+}
+
+i {
+  margin: 0.25em;
+}
+
+/* header */
+/* navbar */
+.navbar{
+  height: 50px;
+  background-color:#fff !important;
+ 
+}
+.logo{
+  text-align:center;
+}
+
+.navbar-brand{
+  
+}
+
+
+.bar{
+text-align:center;
+}
+
+.log{
+  vertical-align: middle;
+text-align:center;
+
+}
+
+.collapse{
+  
+  justify-content:flex-end;
+  
+}
+
+
+/* .nav-link{
+  color: #165873 !important;
+} */
+
+/* .dropdown-menu .dropdown-item{
+ color:#165873;
+} */
+
+.nav-link:hover{
+  color: #2D9EB7}
+
+.dropdown-menu {
+  
+  background-color: #fff !important;
+}
+
+.dropdown-menu a{
+  text-align:center;
+  font-size: 0.9em;
+  font-weight: 400;
+  color:  #165873  !important;
+ 
+}
+
+
+section {
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+
+.section-title{
+  font-size: 4em;
+ letter-spacing: 0.2em;
+}
+/* 跑馬燈 目前只有讓一則消息一職輪迴撥放*/
+
+
+.demo1{
+  background-color: rgba(255, 255, 255, 0.8); 
+
+            overflow: hidden;
+            margin: 0px 10% 0px 0px;
+            border-radius: 0px 0px 100px 0px;
+        }
+        .toutiao {
+          width: 400px;
+          height: 40px;
+          overflow: hidden;
+  
+      }
+
+.clearfix{
+  margin-left: 10%;
+ 
+}
+.demo1 .toutiao ul li {
+  width: 400px;
+  height: 50px
+}
+
+.demo1 .toutiao ul {
+  
+            width: 400px
+        }
+
+.demo1 .toutiao ul li {
+            width: 400px;
+            height: 30px;
+        }
+
+.demo1 .toutiao p {
+            width: 400px;
+            height: 30px;
+            overflow: hidden;
+            
+}
+
+   .demo .toutiao a {
+    text-decoration: none;
+    font-size: 1.125em;
+   
+        
+      }
+
+/* index banner區塊 */
+
+@keyframes caret {
+  50% { border-color: transparent; }
+}
+@keyframes typing {
+  from { width: 0 }
+}
+#banner h4 {
+  /*width: 9em;*/ 
+  border-right: 0.5em solid;
+  overflow: hidden;
+  white-space: nowrap;
+  /* animation: typing 3s steps(7),
+    caret 1s steps(1) infinite; */
+    animation: typing 3s steps(7, end), caret .70s step-end infinite; 
+    animation-iteration-count: infinite; 
+}
+
+#banner h3{
+  width:auto;
+  font-size: 15em;
+  color:  #fff  !important;
+ line-height: 0;
+ opacity: 0.5;
+ top:300px;
+
+}
+ 
+
+#banner h4{
+  top: -1000px;
+  font-size: 2em;
+  color:  #fff  !important;
+  opacity: 0.8;
+}
+
+
+
+#banner h4:hover{
+  
+}
+#banner {
+  width: 100%;
+  height: 800px;
+ top: -100px;
+  background: url("../images/turtle01.jpg") top center;
+  background-size: cover;
+  position: relative;
+}
+
+
+.container{
+display: block;
+}
+
+
+
+
+section h2{
+  margin-bottom: 5%;
+}
+section h2:hover{
+ 
+  color: #2D9EB7;
+ }
+
+#messy{
+  background-image: url(../images/mountain.jpg);
+ 
+
+}
+
+
+
+/* modal */
+
+.modal-content{
+  border-radius: 20px;
+}
+
+/* 確認視窗 */
+.check-modal .modal-title{
+  text-align: center;
+}
+/* 詳細資訊視窗 */
+.info-modal .modal-title{
+  text-align: center;
+
+  color: #fff !important;
+}
+.info-modal .modal-header{
+ border-radius: 20px 20px 0 0 ;
+  background-color: #165873 !important;
+overflow: hidden;
+
+}
+/* .info-modal .modal-header .close{
+ 
+  color: #fff !important;
+
+} */
+.modal-content .modal-body {
+
+}
+.info-modal .modal-body>div{
+  
+  background-color:#165873;
+}
+
+
+
+
+
+
+/* MemberContent */
+
+.content {
+  border: #165873 1px solid;
+  border-radius: 0 100px 100px 100p;
+  overflow: hidden;
+}
+
+/* .content_title{
+ 
+  background-color: #165873;
+  color: #fff;
+  display: flex;
+  
+justify-content: center;
+align-items: center;
+position: absolute;
+left: 0px;
+top: 0px;
+}
+
+.content_title h2{
+  color: #fff;
+} */
+
+/* 會員首頁 使用者圖像 */
+
+.imgBox1 img {
+  width: 100px;
+  height: 100px;
+}
+
+/* 會員資料修改 使用者圖像 */
+
+.imgBox2 img {
+  width: 200px;
+  height: 200px;
+}
+
+.tab-content {
+  width: 100%;
+}
+
+/* 積分兌換 卡片 */
+
+/* .pdCard img {
+  height: 100%;
+  width: 100%;
+} */
+
+/* scroll區塊 */
+
+.activityRule {
+  height: 350px;
+  overflow-y: scroll;
+}
+
+.activityRule2 {
+  height: 200px;
+  overflow-y: scroll;
+}
+
+.otherBox {
+  margin: 30% 0;
+  border: #165873 1px solid;
+  padding: 5%;
+  border-radius: 20px;
+}
+
+.form-row-title {
+  padding: 2%;
+  font-weight: 100;
+  letter-spacing: 0.1em;
+  background-color: #165873;
+  color: #fff;
+  border-radius: 20px 20px 0px 0px;
+}
+
+/* 
+活動卡片排列 */
+
+@media (min-width: 576px) {
+  .card-columns {
+    column-count: 1;
+
+  }
+}
+
+@media (min-width: 768px) {
+  .card-columns {
+    column-count: 2;
+  }
+}
+
+@media (min-width: 992px) {
+  .card-columns {
+    column-count: 3;
+    column-span: 30px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .card-columns {
+    column-count: 3;
+  }
+}
+
+
+
+
+
+/* card */
+/* 卡片顏色 */
+
+.card {
+  color: #165873 !important;
+  border: 0.5px solid #165873 !important;
+  border-radius: 20px;
+  background-color:rgba(255, 255, 255, 0.8);
+}
+
+
+.card:hover{
+ 
+ position: relative;
+  transform: translateY(-10px);
+  box-shadow: #165873 5px 5px;
+  transition:0.3s linear;
+}
+
+.card-img {
+  overflow: hidden;
+}
+
+.card .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow:visible ;
+}
+
+.card-header {
+  text-align: center;
+  background-color:transparent ;
+}
+.card-header h3{
+  
+  color: #165873 !important;
+}
+
+
+
+
+
+/* 按鈕超出card範圍的地方overflow有點問題 */
+
+.card-link {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0%;
+  background-color: none;
+}
+
+.card-link .btn {
+  margin: 0 0.8em;
+}
+
+.card-columns {
+margin:0  2%;
+
+       
+
+}
+.single-counter i{
+  font-size: 3em;
+  display: block;
+  margin-bottom: 2%;
+}
+.single-counter{
+  text-align: center;
+  color:#165873;
+
+}
+.counter{
+  font-size: 1em;
+ margin-right: 0;
+}
+
+/* 按鈕 1.長橢圓 2.上圓下方 */
+
+.btn {
+  /* 圓角會影響到按鈕選單所以取消 */
+  /* border-radius: 100px; */
+}
+
+.btn-circle {
+  border-radius: 100px 100px 0% 0%;
+  ;
+}
+
+/* 按鈕 外框>填滿 */
+ .btn {
+  letter-spacing: 0.2em;
+  font-weight: 400;
+}
+.btn-outline-info {
+  color: #165873;
+  background-color: transparent;
+  border-color: #165873;
+}
+
+.btn-outline-info:hover, .btn-outline-info:active:hover, .btn-outline-info.active:hover {
+  color: #fff;
+  background-color: #165873;
+  border-color: #165873;
+}
+
+.btn-outline-info.active, .btn-outline-info.active.focus {
+  /* border-color: #165873; */
+  color: white;
+  background-color: #165873;
+}
+
+/* CTA按鈕(藍變綠) */
+
+.btn-info {
+  color: #fff;
+  background-color: #165873;
+  /* border-color: #fff; */
+}
+
+.btn-info:hover, .btn-info:active:hover, .btn-info.active:hover {
+  color: #fff;
+  background-color: #2D9EB7;
+  /* border-color: #2D9EB7; */
+}
+
+.btn-info.active, .btn-info.active.focus {
+  /* border-color: #165873; */
+  color: white;
+  background-color: #165873;
+}
+
+
+.select{
+ align-items: center;
+}
+
+.select .btn{
+  width: 6em;
+}
+
+
+
+/* 表單 */
+
+input {
+ 
+  border-radius: 100px;
+}
+
+
+data-aos{
+animation-duration: 0.s linear;
+}
+
+
+.service-time{
+  padding: 5%;
+  background-color:#165873;
+  border-radius: 100px 0px 0px 0px;
+  
+}
+
+.service-time h3{
+  color: rgb(194, 221, 245);
+}
+.service-time .info{
+  color: #fff;
+}
+
+#imgBox {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+    #imgBox > img {
+        width: 100%;
+    }
+
+
+
+
+

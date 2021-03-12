@@ -1,0 +1,276 @@
+﻿@model E7PNN.Models.ViewModel.EditAnnounceVm
+@{
+    ViewBag.Title = "ApplyMessy";
+}
+
+<!-- Page Content -->
+<div class="container">
+
+    <div class="content-header row">
+        <div class="content-header-left col-md-4 col-12 mb-2">
+            <h3 class="content-header-title">00000</h3>
+        </div>
+    </div>
+
+    <!-- Content Row -->
+    <div class="row mt-5">
+
+        <!-- 創建活動-表單 -->
+        <div class="contnet2 col-12 col-md-8 mb-4 p-5">
+
+            <h2 class="text-center"><i class="icofont-hand"></i>髒亂通報</h2>
+
+            @using (Html.BeginForm("ApplyMessy", "Applyevent", FormMethod.Post, new { @role = "form", @enctype = "multipart/form-data" }))
+            {
+
+
+                <!-- 選擇分類：淨灘／淨山／淨路 -->
+                <div class="form-group p-2">
+                    <div class="form-row">
+                        <div class="col-12">
+                            <h4 class="form-row-title"><i class="icofont-location-pin"></i>請選擇活動分類</h4>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="inputRealName" class="col-sm-3 col-form-label">
+                            活動分類
+                        </label>
+                        <div class="col-sm-9">
+                            @Html.DropDownListFor(m => m.AnnType, (IEnumerable<SelectListItem>)ViewBag.SelectType, new { @Name = "AnnType", @class = "custom-select" })
+                        </div>
+                        <div class="invalid-feedback">
+
+                        </div>
+
+
+                    </div>
+                </div>
+                <!-- 地點 -->
+                <div class="form-group p-2">
+                    <div class="form-row">
+                        <div class="col-12">
+                            <h4 class="form-row-title"><i class="icofont-location-pin"></i>請選擇要通報的地點</h4>
+                        </div>
+                    </div>
+                    <!-- 如果是淨山:　將選擇　＂風景區+地點＂查找
+                            淨灘:　將選擇　＂縣市+地點＂
+                            淨路:　將選擇　＂縣市+路段＂
+
+                    以上參考不同淨灘淨山網站
+                    不過還是要看資料庫怎麼弄-->
+
+
+                    <div class="form-group row">
+                        <label for="inputRealName" class="col-sm-3 col-form-label">地點</label>
+                        <div class="col-sm-9">
+                            @Html.DropDownListFor(m => m.AnnSite, (IEnumerable<SelectListItem>)ViewBag.SelectSite, new { @Name = "AnnSite", @class = "custom-select" })
+
+                        </div>
+                        <div class="invalid-feedback">
+
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+
+
+                <!-- 上傳髒亂圖片 -->
+                <div class="form-group p-2">
+                    <div class="form-row">
+                        <div class="col-12">
+                            <h4 class="form-row-title">
+                                <i class="icofont-bullhorn"></i>請上傳髒亂地點的相片（至少五張）
+                            </h4>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-sm-12">
+                        <div class="custom-file my-2">
+                            @Html.TextBoxFor(m => m.PicFileName, new { @Name = "PicFileName", @type = "file", placeholder = Html.DisplayNameFor(m => m.PicFileName) })
+
+                        </div>
+                        <div class="custom-file my-2">
+                            @Html.TextBoxFor(m => m.PicFileName, new { @Name = "PicFileName", @type = "file", placeholder = Html.DisplayNameFor(m => m.PicFileName) })
+                           
+                        </div>
+                        <div class="custom-file my-2">
+                            @Html.TextBoxFor(m => m.PicFileName, new { @Name = "PicFileName", @type = "file", placeholder = Html.DisplayNameFor(m => m.PicFileName) })
+                           
+                        </div>
+                        <div class="custom-file my-2">
+                            @Html.TextBoxFor(m => m.PicFileName, new { @Name = "PicFileName", @type = "file", placeholder = Html.DisplayNameFor(m => m.PicFileName) })
+                         
+                        </div>
+                        <div class="custom-file my-2">
+                            @Html.TextBoxFor(m => m.PicFileName, new { @Name = "PicFileName", @type = "file", placeholder = Html.DisplayNameFor(m => m.PicFileName) })
+                        
+                        </div>
+                        <div class="custom-file my-2">
+                            @Html.TextBoxFor(m => m.PicFileName, new { @Name = "PicFileName", @type = "file", placeholder = Html.DisplayNameFor(m => m.PicFileName) })
+                         
+                        </div>
+                        <div class="custom-file my-2">
+                            @Html.TextBoxFor(m => m.PicFileName, new { @Name = "PicFileName", @type = "file", placeholder = Html.DisplayNameFor(m => m.PicFileName) })
+                         
+                        </div>
+                        <div class="custom-file my-2">
+                            @Html.TextBoxFor(m => m.PicFileName, new { @Name = "PicFileName", @type = "file", placeholder = Html.DisplayNameFor(m => m.PicFileName) })
+                         
+                        </div>
+                        <div class="custom-file my-2">
+                            @Html.TextBoxFor(m => m.PicFileName, new { @Name = "PicFileName", @type = "file", placeholder = Html.DisplayNameFor(m => m.PicFileName) })
+                                                   </div>
+                        <div class="custom-file my-2">
+                            @Html.TextBoxFor(m => m.PicFileName, new { @Name = "PicFileName", @type = "file", placeholder = Html.DisplayNameFor(m => m.PicFileName) })
+                         </div>
+
+                    </div>
+
+
+
+                    <!-- 通報標題與說明 -->
+                    <div class="form-group p-2">
+                        <div class="form-row">
+                            <div class="col-12 ">
+                                <h4 class="form-row-title"><i class="icofont-info"></i>請輸入通報說明</h4> 
+                            </div>
+
+                        </div>
+                    </div>
+                    @*<div class="form-group row">
+                            <label for="inputMessySubject" class="col-sm-3 col-form-label">通報標題</label>
+                            <div class="col-sm-9">
+
+                                <input type="text" class="form-control is-valid" id="inputMessySubject"
+                                       placeholder="請輸入通報標題" value="" required>
+                            </div>
+                            <div class="invalid-feedback">
+
+                            </div>
+
+
+                        </div>*@
+
+
+                    <div class="form-group row">
+                        <label for="inputOther" class="col-sm-3 col-form-label">通報說明</label>
+                        <div class="col-sm-9">
+                            @Html.TextAreaFor(m => m.AnnText, new { @Name = "AnnText", @class = "form-control is-valid", @placeholder = "請輸入通報說明", @rows = "5" })
+
+                            @*<textarea type="text" class="form-control is-valid" id="inputOther" rows="5"
+                                placeholder="請輸入通報說明" value="" required></textarea>*@
+                        </div>
+                        <div class="invalid-feedback">
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+                <div class="form-group p-2">
+
+
+                    <a href="" type="button" class="btn btn-lg btn-info btn-block "
+                       data-toggle="modal" data-target="#messyModalCenter">
+                        驗證
+
+
+                    </a>
+                    <button type="submit" class="btn btn-lg btn-block btn-outline-info" data-dismiss="modal">送出</button>
+
+                </div>
+
+            }
+        </div>
+
+
+
+
+
+
+
+        <!-- 髒亂通報-說明文字 -->
+        <!-- 髒亂通報流程 -->
+        <div class=" col-12 col-md-4 mb-4 p-5">
+            @{
+                Html.RenderAction("applytextMessy");
+            }
+        </div>
+
+    </div>
+</div>
+<!-- /.row -->
+<!-- Modal 髒亂通報卡片詳細資料-->
+
+<div class="modal fade info-modal" id="messyModalCenter" tabindex="-1" role="dialog"
+     aria-labelledby="messyModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="messyModalCenterTitle">髒亂通報確認</h3>
+
+                <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button> -->
+            </div>
+            <div class="modal-body">
+
+            </div>
+            <div class="modal-body">
+
+
+                <p class="card-text">
+                    <span><i class="icofont-user"></i>通報人</span>
+                    <span>劉經理</span>
+                </p>
+
+                <p class="card-text">
+                    <span><i class="icofont-location-pin"></i>通報地點</span>
+                    <span>宜蘭外澳沙灘</span>
+                </p>
+                <p class="card-text">
+                    <span><i class="icofont-calendar"></i>活動日期</span>
+                    <span>2021年03月10日</span>
+                </p>
+
+                <p class="card-text">
+                    <span><i class="icofont-search-user"></i>垃圾量</span>
+                    <span>20%</span>
+                </p>
+                <p class="card-text">
+                    <span><i class="icofont-search-user"></i>建議人數</span>
+                    <span>15</span>
+                </p>
+
+
+
+
+            </div>
+
+            <div class="modal-body">
+                <div id="imgBox">
+                    <img src="~/images/GB01.jpg">
+                    <img src="~/images/GB02.jpg">
+                    <img src="~/images/GB03.jpg">
+                </div>
+
+
+            </div>
+
+            <div class="modal-footer">
+
+                @*<button type="submit" class="btn btn-lg btn-block btn-outline-info" data-dismiss="modal">送出</button>*@
+                <a href='~/Applyevent/ApplyMenu'
+                   type="button" class="btn btn-outline-info btn-md btn-block" data-dismiss="modal">確認</a>
+            </div>
+        </div>
+    </div>
+</div>

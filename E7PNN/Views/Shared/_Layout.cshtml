@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - E7PN</title>
+    <!-- Bootstrap core CSS -->
+    <link href="@Url.Content("~/Content/11_css/bs/bootstrap.min.css")" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="@Url.Content("~/Content/11_css/main/main.css")" rel="stylesheet">
+
+    <!-- font -->
+    <link href="@Url.Content("~/Content/11_css/fonts/icofont.min.css")" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- 動態 -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <header id="header" class="fixed-top ">
+        <!-- 導覽列 Navigation -->
+        <nav class="row navbar navbar-expand-lg">
+            <div class="col-3 col-lg-3 logo">
+                <a class="navbar-brand " href="@Url.Action("Index","Home")">
+                    <img src="~/images/E7PN LOGO TEXT.svg" alt="" style="height:30px;">
+                </a>
+            </div>
+            <div class="nav-list col-7 col-lg-7 d-none d-lg-block">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="@Url.Action("ApplyMenu","Applyevent")" id="navbarDropdownPortfolio"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                創建活動
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
+                                <a class="dropdown-item" href="@Url.Action("ApplyMountain","Applyevent")">淨山申請</a>
+                                <a class="dropdown-item" href="@Url.Action("ApplyEvents","Applyevent")">淨灘申請</a>
+                                <a class="dropdown-item" href="@Url.Action("ApplyRoad","Applyevent")">淨路申請</a>
+                                <a class="dropdown-item" href="@Url.Action("ApplyEventsFast","Applyevent")">快速揪團</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("JoinEvent","JoinEvent")">加入活動</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("ApplyMessy","Applyevent")">髒亂通報</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="@Url.Action("Member","Member")" id="navbarDropdownPages" data-toggle="dropdown"
+                               aria-haspopup="true" aria-expanded="false">
+                                會員專區
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPages">
+                                <a class="dropdown-item" href="@Url.Action("Member","Member")">會員首頁</a>
+                                @*<a class="dropdown-item" href="@Url.Action("Member","Member")">會員資料</a>*@
+                                <a class="dropdown-item" href="@Url.Action("MePassword","Member")">修改密碼</a>
+                                <a class="dropdown-item" href="@Url.Action("MemberEvent","Member")">活動管理</a>
+                                <a class="dropdown-item" href="@Url.Action("MemberMessy","Member")">通報管理</a>
+                                <a class="dropdown-item" href="@Url.Action("MePoints","Member")">積分兌換</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-2 col-lg-2 float-right">
+                <span>
+                    <a class="navbar-brand" href="@Url.Action("Login","Lonig")">
+                        <i class="icofont-login"></i>
+                    </a>
+                </span>
+            </div>
+        </nav>
+        <!--跑馬燈-->
+        <div class="toutiao demo1" style="height: 30px;">
+            <ul class="clearfix">
+                <li>
+                    <h3> <a href="https://www.cwb.gov.tw/V8/C/W/County/index.html"><i class="icofont-alarm"></i>緊急公告：宜蘭縣晚間豪大雨</a></h3>
+                </li>
+                <li>
+                    <h3> <a href="https://www.cwb.gov.tw/V8/C/W/County/index.html"><i class="icofont-alarm"></i>緊急公告：颱風凌晨入境</a></h3>
+                </li>
+                <li>
+                    <h3> <a href="https://www.cwb.gov.tw/V8/C/W/County/index.html"><i class="icofont-alarm"></i>緊急公告：阿里山土石崩塌</a></h3>
+                </li>
+            </ul>
+        </div>
+    </header>
+    @*<div class="container">*@
+        @RenderBody()
+    @*</div>*@
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <div class="m-0 text-center">
+                <button type="button" class="m-2 btn btn-lg btn-outline-info"><i class="icofont-envelope"></i></button>
+                <button type="button" class="m-2 btn btn-lg btn-outline-info"><i class="icofont-facebook"></i></button>
+                <button type="button" class="m-2 btn btn-lg btn-outline-info"><i class="icofont-envelope"></i></button>
+            </div>
+        </div>
+        <div class="container">
+            <p class="mt-4 text-center text-white">Copyright &copy; E7PN 2021</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="@Url.Content("~/Scripts/11_js/jq/jquery.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/11_js/bs/bootstrap.bundle.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/11_js/jq/jquery-vertical-loop.js")"></script>
+    @*<script src="@Url.Content("~/Scripts/11_js/jq/jquery.counterup.js")"></script>*@
+
+    @RenderSection("scripts", required: false)
+    
+    <!-- 跑馬燈 -->
+    <script>
+        $('.demo1').verticalLoop({
+            delay: 3000,
+            order: 'asc'
+        });
+    </script>
+
+    <!-- counter-up -->
+    @*<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>*@
+   
+    <script>
+        $('.counter').counterUp({
+            delay: 10,
+            time: 1000
+        });
+    </script>
+
+    <!--動態-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

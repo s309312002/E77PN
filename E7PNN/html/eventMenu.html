@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>創建活動選單</title>
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/main.css" rel="stylesheet">
+
+    <!-- font -->
+    <link href="vendor/icofont/icofont.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <header id="header" class="fixed-top ">
+        <!-- 導覽列 Navigation -->
+
+        <nav class="row navbar navbar-expand-lg navbar-light bg-light">
+            <div class="col-7 col-lg-3">
+                <a class="navbar-brand" href="#">
+                    <img src="images/logo.svg" width="60" height="60" alt="">
+                </a>
+            </div>
+            <div class="col-lg-6 d-none d-lg-block">
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">最新消息</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                申請通報
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
+                                <a class="dropdown-item" href="fastEvent">快速揪團</a>
+                                <a class="dropdown-item" href="eventMenu.html">創建活動</a>
+                                <a class="dropdown-item" href="#">加入活動</a>
+                                <a class="dropdown-item" href="#">髒亂通報</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                活動成果
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+                                <a class="dropdown-item" href="#">活動相簿</a>
+                                <a class="dropdown-item" href="#">活動報告</a>
+
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">關於我們</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPages" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                會員專區
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPages">
+                                <a class="dropdown-item" href="memberIndex.html">會員首頁</a>
+                                <a class="dropdown-item" href="memberEdit.html">會員資料</a>
+                                <a class="dropdown-item" href="memberPassword.html">修改密碼</a>
+                                <a class="dropdown-item" href="#">活動管理</a>
+                                <a class="dropdown-item" href="#">通報管理</a>
+                                <a class="dropdown-item" href="#">積分兌換</a>
+
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+            <div class="col-5 col-lg-3">
+                <span>
+                    <a class="navbar-brand" href="#">
+                        <i class="icofont-login"></i>
+                    </a>
+                </span>
+
+            </div>
+        </nav>
+
+
+
+    </header>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <section>
+            <!-- Content Row -->
+            <div class="row">
+
+                <!-- 創建活動-一般模式 -->
+                <div class="contnet2 col-12 col-md-6 mb-4 p-5">
+
+                    <h2 class="text-center"><i class="icofont-turtle"></i>一般模式</h2>
+                    <dl class="row activityRule">
+
+                        <dt class="col-sm-4">
+                            <h5>Step 1<br></h5>
+                            <h4>填寫活動申請</h4>
+                        </dt>
+                        <dd class="col-sm-8">
+
+                            填寫活動資訊與聯絡資訊
+                        </dd>
+
+
+
+                        <dt class="col-sm-4">
+                            <h5>Step 2<br></h5>
+                            <h4>等待管理員審核</h4>
+                        </dt>
+                        <dd class="col-sm-8">等待管理員審核您創建的活動</dd>
+
+
+                        <dt class="col-sm-4">
+                            <h5>Step 3<br></h5>
+                            <h4>等待其他夥伴加入</h4>
+                        </dt>
+                        <dd class="col-sm-8">
+                            活動報名截止：<br>
+                            一般模式於活動日期的十四個工作天以前自動截止報名，於活動報名截止前達到活動發起人設置之人數上限的話，將提前進入下一階段。<br>
+                            <br>
+                            未達最低人數：<br>
+                            報名截止日以前未達到特定活動地點要求之最低人數限制將通知延期舉辦，請再次申請活動。<br>
+                            達到人數上限：將提前進入下一階段。
+                        </dd>
+
+                        <dt class="col-sm-4">
+                            <h5>Step 4<br></h5>
+                            <h4>等待政府單位審核</h4>
+                        </dt>
+                        <dd class="col-sm-8">由環保機關協助審核內容
+                        </dd>
+
+
+
+                        <dt class="col-sm-4">
+                            <h5>Step 5<br></h5>
+                            <h4>確認垃圾清運地點</h4>
+                        </dt>
+                        <dd class="col-sm-8">如需清潔隊協助清運垃圾，<br>
+                            需於審核通過後與清潔隊確認垃圾暫置位置，<br>
+                            避免活動日影響到一般民眾。
+
+                        </dd>
+
+
+                        <dt class="col-sm-4">
+                            <h5>Step 6<br></h5>
+                            <h4>活動當日聯繫清掃</h4>
+
+                        </dt>
+                        <dd class="col-sm-8">淨灘完畢垃圾集中後，聯繫清潔隊確認清運時間。</dd>
+
+                        <dt class="col-sm-4">
+                            <h5>Step 7<br></h5>
+                            <h4>申請服務時數證明</h4>
+                        </dt>
+                        <dd class="col-sm-8">如需申請服務時數證明，
+                            需填寫活動成果紀錄<br>
+                            1.淨灘地點（海岸線）<br>
+                            2.人數、日期、時間...等活動資訊<br>
+                            3.資源與非資源垃圾重量（公噸）<br>
+                            4.活動前後照片
+                        </dd>
+
+
+                    </dl>
+                    <div class="my-4">
+                        <div class="row">
+
+                            <a class=" col-4 "><button type="button" class="btn btn-info btn-circle btn-block btn-lg"><i
+                                        class="icofont-beach-bed"></i>淨灘</button></a>
+                            <a class="col-4 "><button type="button" class="btn btn-info btn-circle btn-block btn-lg"><i
+                                        class="icofont-hill"></i>淨山</button></a>
+                            <a class="col-4"><button type="button" class="btn btn-info btn-circle btn-block btn-lg"><i
+                                        class="icofont-road"></i>淨路</button></a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- 創建活動-快速揪團 -->
+                <div class="content2 col-12 col-md-6 mb-4 p-5">
+
+                    <h2 class="text-center"> <i class="icofont-rabbit"></i>快速揪團</h2>
+                    <dl class="row activityRule">
+
+                        <dt class="col-sm-4">
+                            <h5>Step 1<br></h5>
+                            <h4>填寫活動申請</h4>
+                        </dt>
+                        <dd class="col-sm-8">
+
+                            填寫活動資訊與聯絡資訊</dd>
+
+                        
+
+                        <dt class="col-sm-4">
+                            <h5>Step 2<br></h5>
+                            <h4>等待管理員審核</h4>
+                        </dt>
+                        <dd class="col-sm-8">等待管理員審核您創建的活動</dd>
+
+
+                        <dt class="col-sm-4">
+                            <h5>Step 3<br></h5>
+                            <h4>等待其他夥伴加入</h4>
+                        </dt>
+                        <dd class="col-sm-8">
+                            活動報名截止：<br>
+                            快速模式於活動日期的一個工作天以前自動截止報名，於活動報名截止前達到活動發起人設置之人數上限的話，將提前進入下一階段。<br>
+                            <br>
+                            未達最低人數：<br>
+                            無最低人數限制。
+                        </dd>
+
+                        <dt class="col-sm-4">
+                            <h5>Step 4<br></h5>
+                            <h4>申請服務時數證明</h4>
+                        </dt>
+                        <dd class="col-sm-8">如需申請服務時數證明，
+                            需填寫活動成果紀錄<br>
+                            1.淨灘地點（海岸線）<br>
+                            2.人數、日期、時間...等活動資訊<br>
+                            3.資源與非資源垃圾重量（公噸）<br>
+                            4.活動前後照片
+                        </dd>
+
+
+                    </dl>
+                    <div class="my-4">
+                        <div class="row">
+
+
+                            <a href="fastEvent.html" class="col-12"><button type="button" class="btn btn-info btn-circle btn-block btn-lg">
+                                <i class="icofont-rabbit"></i>快速揪團</button></a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+    </div>
+
+    </div>
+    </div>
+    <!-- /.row -->
+    </section>
+
+
+
+    </div>
+    <!-- /.container -->
+
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <div class="m-0 text-center">
+                <button type="button" class="m-2 btn btn-lg btn-outline-info  btn-circle"><i
+                        class="icofont-envelope"></i></button>
+                <button type="button" class="m-2 btn btn-lg btn-outline-info  btn-circle"><i
+                        class="icofont-facebook"></i></button>
+                <button type="button" class="m-2 btn btn-lg btn-outline-info  btn-circle"><i
+                        class="icofont-envelope"></i></button>
+
+            </div>
+        </div>
+        </div>
+        <div class="container">
+            <p class="mt-4 text-center text-white">Copyright &copy; E7PN 2021</p>
+        </div>
+        <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

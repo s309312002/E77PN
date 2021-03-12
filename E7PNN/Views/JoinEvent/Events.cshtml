@@ -1,0 +1,88 @@
+﻿@model E7PNN.Models.Activity
+@{
+    ViewBag.Title = "Events";
+}
+
+
+<div class="content-header row">
+    <div class="content-header-left col-md-4 col-12 mb-2">
+        <h3 class="content-header-title">00000</h3>
+    </div>
+</div>
+
+
+
+<div class="row mt-lg-5 mb-5 ">
+    <div class="col-12">
+        <div class="card" style="max-width:600px;text-align:center;font-weight:700;margin:auto">
+            <div class="card-header">
+                <h4 class="card-title">活動資料</h4>
+
+
+            </div>
+            <div class="card-content collapse show">
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead class="thead">
+                            <tr>
+                                <td>@Html.DisplayNameFor(model => model.ActName)</td>
+                                <td>@Html.DisplayFor(model => model.ActName)</td>
+                            </tr>
+
+                            <tr>
+                                <td>@Html.DisplayNameFor(model => model.ActTime)</td>
+                                <td>@Html.DisplayFor(model => model.ActTime)</td>
+                            </tr>
+                            <tr>
+                                <td>@Html.DisplayNameFor(model => model.ActUser)</td>
+                                <td>@Html.DisplayFor(model => model.ActUser)</td>
+                            </tr>
+                            <tr>
+                                <td>@Html.DisplayNameFor(model => model.StatTime)</td>
+                                <td>@Html.DisplayFor(model => model.StatTime)</td>
+                            </tr>
+                            <tr>
+                                <td>@Html.DisplayNameFor(model => model.EndTime)</td>
+                                <td>@Html.DisplayFor(model => model.EndTime)</td>
+                            </tr>
+                            <tr>
+                                <td>@Html.DisplayNameFor(model => model.SumPeople)</td>
+                                <td>@Html.DisplayFor(model => model.SumPeople)</td>
+                            </tr>
+                            <tr>
+                                <td>@Html.DisplayNameFor(model => model.ActText)</td>
+                                <td>@Html.DisplayFor(model => model.ActText)</td>
+                            </tr>
+                            <tr>
+                                <td>@Html.DisplayNameFor(model => model.ActType)</td>
+                                <td>@Html.DisplayFor(model => model.ActType)</td>
+                            </tr>
+                            <tr>
+                                <td>@Html.DisplayNameFor(model => model.ActClass)</td>
+                                <td>@Html.DisplayFor(model => model.ActClass)</td>
+                            </tr>
+                            <tr>
+                                <td>@Html.DisplayNameFor(model => model.ActSite)</td>
+                                <td>@Html.DisplayFor(model => model.ActSite)</td>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+            <div>
+                <p>
+                    <i class='la la-external-link'></i>@Html.ActionLink("回上一頁", "JoinEvent")
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+
+
+
+
+

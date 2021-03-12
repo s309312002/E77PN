@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>加入活動</title>
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/main.css" rel="stylesheet">
+
+    <!-- font -->
+    <link href="vendor/icofont/icofont.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <header id="header" class="fixed-top ">
+        <!-- 導覽列 Navigation -->
+
+
+        <nav class="row navbar navbar-expand-lg navbar-light bg-light">
+
+            <div class="col-6 col-lg-3 logo">
+                <a class="navbar-brand " href="#">
+                    <img src="images/E7PN LOGO TEXT.svg" height="30px" alt="">
+                </a>
+            </div>
+            <div class="col-4 col-lg-7 d-none d-lg-block">
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="eventMenu.html" id="navbarDropdownPortfolio"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                創建活動
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
+
+                                <a class="dropdown-item" href="applyEventMountain.html">淨山申請</a>
+                                <a class="dropdown-item" href="applyEventBeach.html">淨灘申請</a>
+                                <a class="dropdown-item" href="applyEventRoad.html">淨路申請</a>
+                                <a class="dropdown-item" href="applyEventFast.html">快速揪團</a>
+
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="joinEvent.html">加入活動</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="applyMessy.html">髒亂通報</a>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">關於我們</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPages" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                會員專區
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPages">
+                                <a class="dropdown-item" href="#">會員首頁</a>
+                                <a class="dropdown-item" href="#">會員資料</a>
+                                <a class="dropdown-item" href="#">修改密碼</a>
+                                <a class="dropdown-item" href="#">活動管理</a>
+                                <a class="dropdown-item" href="#">通報管理</a>
+                                <a class="dropdown-item" href="#">積分兌換</a>
+
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+            <div class="col-2 col-lg-2">
+                <span>
+                    <a class="navbar-brand" href="#">
+                        <i class="icofont-login"></i>
+                    </a>
+                </span>
+
+            </div>
+        </nav>
+
+
+        <!--跑馬燈-->
+        <div class="toutiao demo1" style="height: 30px">
+            <ul class="clearfix">
+                <li>
+                    <p> <a href="#"><i class="icofont-alarm"></i>緊急公告：宜蘭縣晚間豪大雨</a></p>
+                </li>
+
+                <!-- <li><p> <a href="#">修改公告文字2</a></p></li>
+          <li><p> <a href="#">修改公告文字3</a></p></li> -->
+            </ul>
+        </div>
+
+    </header>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <section>
+
+            <!-- Content Row -->
+            <div class="row">
+
+                <!-- 選擇分類按鈕 -->
+
+                <div class="select-btn col-12 col-md-2 mb-4 p-5 align-center">
+
+
+
+                    <div class="btn-group btn-group-toggle btn-group-vertical" data-toggle="buttons">
+                        <label class="mb-3 btn btn-outline-info btn-md active">
+                            <input id="btn-all" name="options" type="radio" data-rel="all"><i
+                                class="icofont-bullhorn"></i>全部</label>
+
+                        <label class="mb-3 btn btn-outline-info btn-md ">
+                            <input id="btn-beach" name="options" type="radio" data-rel="beach" autocomplete="off">
+                            <i class="icofont-beach-bed"></i>淨灘</label>
+                        <label class="mb-3 btn btn-outline-info btn-md ">
+                            <input id="btn-mountain" name="options" type="radio" data-rel="mountain"
+                                autocomplete="off"><i class="icofont-hill"></i>淨山</label>
+                        <label class="mb-3 btn btn-outline-info btn-md "><input id="btn-road" name="options"
+                                type="radio" data-rel="road" autocomplete="off"><i class="icofont-road"></i>淨路</label>
+
+                    </div>
+                    <!-- 時間 -->
+                    <!-- 時間箭頭往上(舊-新)  點了按鈕變成箭頭往下(新-舊)-->
+                    <!-- <button type="button" id="arrow-up" onclick="newTime" style="visibility: visible;"
+                        class="mb-3 btn btn-outline-info btn-md " data-toggle="button" aria-pressed="true"
+                        autocomplete="off"><i class="icofont-clock-time"></i><i class="icofont-arrow-up"></i></button> -->
+                    <!-- 時間箭頭往上(新-舊) -->
+                    <!-- <button type="button" id="arrow-down" onclick="oldTime" style="visibility: hidden;"
+                        class="mb-3 btn btn-outline-info btn-md " data-toggle="button" aria-pressed="true"
+                        autocomplete="off"><i class="icofont-clock-time"></i><i class="icofont-arrow-down"></i></button> -->
+
+
+
+                </div>
+
+                <!--加入活動 卡片區域 02/25 改卡片樣式-->
+                <div class="contnet2 col-12 col-md-10 mb-4 ">
+
+
+                    <div class="card-columns" id="combo">
+
+
+                        <div class="card ds road">
+
+                            <div class="card-header">
+                                <h3 class="card-title">淨灘標題活動標題1</h3>
+                                <h class="card-subtitle mb-2 text-muted">活動發布日期</h6>
+                            </div>
+                            <div class="card-body">
+
+                                <p class="card-text"><i class="icofont-location-pin"></i>宜蘭海邊</p>
+                                <p class="card-text"><i class="icofont-clock-time"></i>2021年01月14日 13:00-14:00</p>
+                                <p class="card-text"><i class="icofont-search-user"></i>20/20</p>
+
+                            </div>
+
+                            <div class="card-link">
+                                <a class="" href="#"> <button type="button"
+                                        class="btn btn-md btn-outline-info  btn-circle"><i
+                                            class="align-center icofont-plus"></i></button></a>
+                                <a class="" href="#"> <button type="button"
+                                        class="btn btn-md btn-outline-info  btn-circle"><i
+                                            class="icofont-info"></i></button></a>
+                                <a class="" href="#"> <button type="button"
+                                        class="btn btn-md btn-outline-info  btn-circle"><i
+                                            class="icofont-envelope"></i></button></a>
+                            </div>
+
+                        </div>
+
+                        <div class="card ds mountain">
+                            <div class="card-header">
+                                <h3 class="card-title">活動標題活動標題1</h3>
+                                <h class="card-subtitle mb-2 text-muted">活動發布日期</h6>
+                            </div>
+                            <div class="card-body">
+
+                                <p class="card-text"><i class="icofont-location-pin"></i>新北市龍洞站-鼻頭角步道</p>
+                                <p class="card-text"><i class="icofont-clock-time"></i>2021年01月14日 13:00-14:00</p>
+                                <p class="card-text"><i class="icofont-search-user"></i>20/20</p>
+
+                            </div>
+
+                            <div class="card-link">
+                                <a class="" href="#"> <button type="button"
+                                        class="btn btn-md btn-outline-info  btn-circle"><i
+                                            class="align-center icofont-plus"></i></button></a>
+                                <a class="" href="#"> <button type="button"
+                                        class="btn btn-md btn-outline-info  btn-circle"><i
+                                            class="icofont-info"></i></button></a>
+                                <a class="" href="#"> <button type="button"
+                                        class="btn btn-md btn-outline-info  btn-circle"><i
+                                            class="icofont-envelope"></i></button></a>
+                            </div>
+                        </div>
+
+                        <div class="card ds beach">
+                            <div class="card-header">
+                                <h3 class="card-title">活動標題活動標題1</h3>
+                                <h class="card-subtitle mb-2 text-muted">活動發布日期</h6>
+                            </div>
+                            <div class="card-body">
+
+                                <p class="card-text"><i class="icofont-location-pin"></i>新北市龍洞站-鼻頭角步道</p>
+                                <p class="card-text"><i class="icofont-clock-time"></i>2021年01月14日 13:00-14:00</p>
+                                <p class="card-text"><i class="icofont-search-user"></i>20/20</p>
+
+                            </div>
+
+                            <div class="card-link">
+                                <a class="" href="#"> <button type="button"
+                                        class="btn btn-md btn-outline-info  btn-circle"><i
+                                            class="align-center icofont-plus"></i></button></a>
+                                <a class="" href="#"> <button type="button"
+                                        class="btn btn-md btn-outline-info  btn-circle"><i
+                                            class="icofont-info"></i></button></a>
+                                <a class="" href="#"> <button type="button"
+                                        class="btn btn-md btn-outline-info  btn-circle"><i
+                                            class="icofont-envelope"></i></button></a>
+                            </div>
+                        </div>
+
+
+
+
+
+
+                    </div>
+
+                    <!-- 分頁按鈕 -->
+                    <div class="m-5">
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination justify-content-center">
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                <li class="page-item"><a class="page-link" href="#">6</a></li>
+                                <li class="page-item"><a class="page-link" href="#">7</a></li>
+                                <li class="page-item"><a class="page-link" href="#">8</a></li>
+                                <li class="page-item"><a class="page-link" href="#">9</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+
+                                </li>
+                            </ul>
+                        </nav>
+
+                    </div>
+
+
+
+
+
+
+                </div>
+            </div>
+            <!-- /.row -->
+        </section>
+
+
+
+    </div>
+    <!-- /.container -->
+
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <div class="m-0 text-center">
+                <button type="button" class="btn btn-md btn-outline-info btn-circle"><i
+                        class="icofont-envelope"></i></button>
+                <button type="button" class="btn btn-md btn-outline-info btn-circle"><i
+                        class="icofont-facebook"></i></button>
+                <button type="button" class="btn btn-md btn-outline-info btn-circle"><i
+                        class="icofont-instagram"></i></button>
+
+            </div>
+        </div>
+        </div>
+        <div class="container">
+            <p class="mt-4 text-center text-white">Copyright &copy; E7PN 2021</p>
+        </div>
+        <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script>
+        // 不會寫RRRR
+        // $(function () {
+        //     $('.ds').addClass('all').addClass('scale');
+        //     $('#combo .ds ').addClass('.card-responsive');
+        //     var selectedClass = "";
+        //     $(".select-btn>div>label>input").click(function () {
+        //         selectedClass = $(this).attr("data-rel");
+        //         $("#combo").fadeTo(100, 0.1);
+        //         $("#combo .card").not("." + selectedClass).fadeOut().removeClass('scale');
+        //         setTimeout(function () {
+        //             $("." + selectedClass).fadeIn().addClass('scale');
+        //             $("#combo").fadeTo(300, 1);
+        //         }, 300);
+        //         return false;
+        //     });
+        // });
+    </script>
+
+</body>
+
+</html>

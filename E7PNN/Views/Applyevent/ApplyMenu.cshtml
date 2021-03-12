@@ -1,0 +1,229 @@
+﻿
+@{
+    ViewBag.Title = "ApplyMenu";
+}
+<section>
+    <!-- Page Content -->
+    <div class="container">
+
+        
+
+        <!-- Content Row -->
+        <div class="row mt-5">
+
+            <!-- 創建活動-一般模式 -->
+            <div class=" col-12 col-md-6 mb-4 p-5">
+
+                <h2 class="text-center">
+                    <i class="icofont-turtle"></i>一般模式
+                </h2>
+                <dl class="row activityRule">
+
+                    <dt class="col-sm-4">
+                        <h5>
+                            Step 1
+                            <br>
+                        </h5>
+                        <h4>填寫活動申請</h4>
+                    </dt>
+                    <dd class="col-sm-8">
+
+                        填寫活動資訊與聯絡資訊
+                    </dd>
+
+
+
+                    <dt class="col-sm-4">
+                        <h5>
+                            Step 2
+                            <br>
+                        </h5>
+                        <h4>等待管理員審核</h4>
+                    </dt>
+                    <dd class="col-sm-8">等待管理員審核您創建的活動</dd>
+
+
+                    <dt class="col-sm-4">
+                        <h5>
+                            Step 3
+                            <br>
+                        </h5>
+                        <h4>等待其他夥伴加入</h4>
+                    </dt>
+                    <dd class="col-sm-8">
+                        活動報名截止：<br>
+                        一般模式於活動日期的十四個工作天以前自動截止報名，於活動報名截止前達到活動發起人設置之人數上限的話，將提前進入下一階段。<br>
+                        <br>
+                        未達最低人數：<br>
+                        報名截止日以前未達到特定活動地點要求之最低人數限制將通知延期舉辦，請再次申請活動。<br>
+                        達到人數上限：將提前進入下一階段。
+                    </dd>
+
+                    <dt class="col-sm-4">
+                        <h5>
+                            Step 4
+                            <br>
+                        </h5>
+                        <h4>等待政府單位審核</h4>
+                    </dt>
+                    <dd class="col-sm-8">
+                        由環保機關協助審核內容
+                    </dd>
+
+
+
+                    <dt class="col-sm-4">
+                        <h5>
+                            Step 5
+                            <br>
+                        </h5>
+                        <h4>確認垃圾清運地點</h4>
+                    </dt>
+                    <dd class="col-sm-8">
+                        如需清潔隊協助清運垃圾，<br>
+                        需於審核通過後與清潔隊確認垃圾暫置位置，<br>
+                        避免活動日影響到一般民眾。
+
+                    </dd>
+
+
+                    <dt class="col-sm-4">
+                        <h5>
+                            Step 6
+                            <br>
+                        </h5>
+                        <h4>活動當日聯繫清掃</h4>
+
+                    </dt>
+                    <dd class="col-sm-8">淨灘完畢垃圾集中後，聯繫清潔隊確認清運時間。</dd>
+
+                    <dt class="col-sm-4">
+                        <h5>
+                            Step 7
+                            <br>
+                        </h5>
+                        <h4>申請服務時數證明</h4>
+                    </dt>
+                    <dd class="col-sm-8">
+                        如需申請服務時數證明，
+                        需填寫活動成果紀錄<br>
+                        1.淨灘地點（海岸線）<br>
+                        2.人數、日期、時間...等活動資訊<br>
+                        3.資源與非資源垃圾重量（公噸）<br>
+                        4.活動前後照片
+                    </dd>
+
+
+                </dl>
+                <div class="my-4">
+                    <div class="row">
+
+                        <a class="col-4 btn btn-info  btn-lg"
+                           href="@Url.Action("ApplyEvents","Applyevent")"
+                           type="button">
+                            <i class="icofont-beach-bed"></i>淨灘
+                        </a>
+                        <a class="col-4 btn btn-info  btn-lg"
+                           href="@Url.Action("ApplyMountain","Applyevent")"
+                           type="button">
+                            <i class="icofont-hill"></i>淨山
+                        </a>
+                        <a class="col-4 btn btn-info   btn-lg"
+                           href="@Url.Action("ApplyRoad","Applyevent")"
+                           type="button">
+                            <i class="icofont-road"></i>淨路
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- 創建活動-快速揪團 -->
+            <div class="content2 col-12 col-md-6 mb-4 p-5">
+
+                <h2 class="text-center">
+                    <i class="icofont-rabbit"></i>快速揪團
+                </h2>
+                <dl class="row activityRule">
+
+                    <dt class="col-sm-4">
+                        <h5>
+                            Step 1
+                            <br>
+                        </h5>
+                        <h4>填寫活動申請</h4>
+                    </dt>
+                    <dd class="col-sm-8">
+
+                        填寫活動資訊與聯絡資訊
+                    </dd>
+
+
+
+                    <dt class="col-sm-4">
+                        <h5>
+                            Step 2
+                            <br>
+                        </h5>
+                        <h4>等待管理員審核</h4>
+                    </dt>
+                    <dd class="col-sm-8">等待管理員審核您創建的活動</dd>
+
+
+                    <dt class="col-sm-4">
+                        <h5>
+                            Step 3
+                            <br>
+                        </h5>
+                        <h4>等待其他夥伴加入</h4>
+                    </dt>
+                    <dd class="col-sm-8">
+                        活動報名截止：<br>
+                        快速模式於活動日期的一個工作天以前自動截止報名，於活動報名截止前達到活動發起人設置之人數上限的話，將提前進入下一階段。<br>
+                        <br>
+                        未達最低人數：<br>
+                        無最低人數限制。
+                    </dd>
+
+                    <dt class="col-sm-4">
+                        <h5>
+                            Step 4
+                            <br>
+                        </h5>
+                        <h4>申請服務時數證明</h4>
+                    </dt>
+                    <dd class="col-sm-8">
+                        如需申請服務時數證明，
+                        需填寫活動成果紀錄<br>
+                        1.淨灘地點（海岸線）<br>
+                        2.人數、日期、時間...等活動資訊<br>
+                        3.資源與非資源垃圾重量（公噸）<br>
+                        4.活動前後照片
+                    </dd>
+
+
+                </dl>
+                <div class="my-4">
+                    <div class="row">
+
+
+                        <a href="@Url.Action("ApplyEventsFast","Applyevent")" class="col-12 btn btn-info btn-block btn-lg"
+                           type="button">
+                            <i class="icofont-rabbit"></i>快速揪團
+
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+    <!-- /.row -->
+</section>

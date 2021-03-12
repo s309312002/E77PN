@@ -1,0 +1,61 @@
+﻿@model E7PNN.Models.ViewModel.EditActivityVm
+@{
+    ViewBag.Title = "SList";
+}
+
+<h2>SList</h2>
+<div class="container">
+
+    <div class="content-header row mt-5">
+        <div class="content-header-left col-md-4 col-12 mb-2">
+        </div>
+
+    </div>
+
+
+    @*<div>
+
+        <p>@Model.ActType</p>
+        <p>@Model.ActSite</p>
+        <p>@Model.ActTime</p>
+        <p>@Model.StarTime</p>
+        <p>@Model.EndTime</p>
+        <p>@Model.SumPeople</p>
+        <p>@Model.Number</p>
+        <p>@Model.Email</p>
+        <p>@Model.ActName</p>
+        <p>@Model.Text</p>
+
+    </div>*@
+
+    
+
+    <div>
+
+            @ViewData["ActType"]
+            <br />
+            @ViewData["Area"]
+            <br />
+            @ViewData["Site"]
+            <br />
+            @ViewData["Date"]
+            <br />
+            @ViewData["StartTime"]
+            <br />
+            @ViewData["EndTime"]
+            <br />
+            @ViewData["People"]
+            <br />
+            @ViewData["Phone"]
+            <br />
+            @ViewData["Email"]
+            <br />
+            @ViewData["ActTitle"]
+            <br />
+            @ViewData["Gather"]
+            <br />
+            @ViewData["Description"]
+            <br />
+
+        </div>
+</div>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/login.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <script type="text/javascript" src="login.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"
+        integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+"
+        crossorigin="anonymous"></script>
+
+
+    <title>LogIn</title>
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+<div class="bg bg-blur"></div>
+
+    <div class="frame">
+
+        <div id="image_logo">
+            <a href="index.html"> <img src="images/logo.svg"></a>
+        </div>
+        <!-- 第三方登入區塊 -->
+        <div id="login_otherDivice">
+            <button type="button" class="btn_login_facebook"><i class="fab fa-facebook-f"></i>
+                使用 Facebook註冊 / 登入
+
+            </button>
+            <button type="button" class="btn_login_google"><i class="fab fa-google"></i>
+                使用 Google註冊 / 登入
+            </button>
+        </div>
+        <!-- 字+中間的過度的橫線 -->
+        <div class="title_gap">或</div>
+       
+
+        <!-- 登入表單 使用信箱密碼 -->
+        <form id="form_login" action="#" method="post">
+            <div class="field">
+                <input required type="email" name="email" id="email" placeholder="e7pn@example.com" autocomplete="on"
+                    value="">
+                <label for="email">信箱</label>
+            </div>
+
+            <div class="field">
+                <input required type="password" name="password" id="password" placeholder="password" autocomplete="on"
+                    value="" minlength="8">
+                <label for="password">密碼</label>
+            </div>
+            <button class="btn_login" type="submit" value="login">
+                登入
+
+            </button>
+
+        </form>
+
+        <!-- 忘記密碼或註冊 -->
+        <button class="btn_forget" type="button" value="to_forget" onclick="window.location='forget.html'">忘記密碼？</button>
+        <button class="btn_signup" type="button" value="to_signup" onclick="window.location='signup.html'">註冊</button>
+     
+
+
+
+        <!-- 個資協議 -->
+        <p class="agree">註冊/登入即代表您同意遵守 <a href="terms.html">E7PN 使用協議</a></label>
+        </p>
+
+    </div>
+
+</body>
+
+
+
+</html>

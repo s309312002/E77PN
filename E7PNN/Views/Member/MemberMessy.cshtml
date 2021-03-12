@@ -1,0 +1,134 @@
+﻿
+@{
+    ViewBag.Title = "MemberMessy";
+}
+
+<!-- 通報管理 -->
+
+
+<!-- Page Content -->
+<div class="container">
+
+    <div class="content-header row">
+        <div class="content-header-left col-md-4 col-12 mb-2">
+            <h3 class="content-header-title">00000</h3>
+        </div>
+    </div>
+
+    <!-- Content Row -->
+    <div class="row mt-5">
+        <!-- 側邊攔 Sidebar Column -->
+        <div class="col-lg-2 mb-5 mt-5">
+            @{
+                Html.RenderPartial("Sidebar");
+            }
+        </div>
+
+        <!-- 內容 Content Column -->
+        <div class="content col-lg-10 mb-4 p-5">
+            <!-- 選單:我提交的通報/歷年通報紀錄 -->
+            <div class="row mt-5">
+
+            </div>
+            <ul class="nav nav-pills ">
+                <li class="active m-2">
+                    <a data-toggle="tab" href="#addMessy">
+                        <i class="icofont-hand"></i>我提交的通報
+                    </a>
+                </li>
+
+                <li class="m-2">
+                    <a data-toggle="tab" href="#historyMessy">
+                        <i class="icofont-history"></i>歷年通報紀錄
+                    </a>
+                </li>
+
+            </ul>
+            <!-- 顯示活動的資料:我提交的通報/歷年通報紀錄 -->
+
+            <div class="tab-content">
+
+                <!-- 我提交的通報 -->
+                <div>
+                    @{
+                        Html.RenderPartial("MyMessy");
+                    }
+                </div>
+
+
+
+                <!-- 歷年通報紀錄 -->
+
+                <div>
+                    @{
+                        Html.RenderPartial("MessyHistory");
+                    }
+                </div>
+
+            </div>
+
+            <!-- 分頁按鈕 -->
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">1</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">2</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">3</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">4</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">5</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">6</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">7</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">8</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">9</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+
+                    </li>
+                </ul>
+            </nav>
+
+
+
+        </div>
+
+
+
+        <div class="row mt-5">
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+
+</div>
+

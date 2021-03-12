@@ -1,0 +1,68 @@
+﻿
+<head>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <style type="text/css">
+
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+
+    </style>
+    <script>
+
+        function initMap() {
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 7,
+                center: { lat: 23.881408095685497, lng: 120.94864665996522 },
+            });
+            setMarkers(map);
+        }
+
+        const beaches = [
+            ["宜蘭外澳沙灘", 24.879366593119347, 121.8428137603785, 4],
+            ["花蓮北濱公園", 23.97582405957161, 121.61698839564907, 5],
+            ["宜蘭南澳神秘沙灘", 24.454464627419966, 121.8003052962445, 3],
+            ["新北白沙灣", 25.284975196081714, 121.51714347601988, 2],
+            ["新竹幸福沙灣", 24.838517275456105, 120.91842112449676, 1],
+        ];
+
+        function setMarkers(map) {
+
+            const svgMarker = {
+                path:
+                    "M10.453 14.016l6.563-6.609-1.406-1.406-5.156 5.203-2.063-2.109-1.406 1.406zM12 2.016q2.906 0 4.945 2.039t2.039 4.945q0 1.453-0.727 3.328t-1.758 3.516-2.039 3.070-1.711 2.273l-0.75 0.797q-0.281-0.328-0.75-0.867t-1.688-2.156-2.133-3.141-1.664-3.445-0.75-3.375q0-2.906 2.039-4.945t4.945-2.039z",
+                fillColor: "white",
+                fillOpacity: 0.6,
+                strokeWeight: 0,
+                rotation: 0,
+                scale: 2,
+                anchor: new google.maps.Point(15, 30),
+            };
+
+            const shape = {
+                coords: [1, 1, 1, 20, 18, 20, 18, 1],
+                type: "poly",
+            };
+
+            for (let i = 0; i < beaches.length; i++) {
+                const beach = beaches[i];
+                new google.maps.Marker({
+                    position: { lat: beach[1], lng: beach[2] },
+                    map,
+                    icon: svgMarker,
+                    shape: shape,
+                    title: beach[0],
+                    zIndex: beach[3],
+                });
+            }
+        }
+        
+    </script>
+</head>
+<body>
+    <div id="map"></div>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmY0DH8fAdm_j2lE5NlFQecHKvZljZUJU&callback=initMap&libraries=&v=weekly"
+            async></script>
+</body>

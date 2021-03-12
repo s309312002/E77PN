@@ -1,0 +1,481 @@
+﻿<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>積分兌換</title>
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/main.css" rel="stylesheet">
+
+    <!-- font -->
+    <link href="vendor/icofont/icofont.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <header id="header" class="fixed-top ">
+        <!-- 導覽列 Navigation -->
+
+        <nav class="row navbar navbar-expand-lg navbar-light bg-light">
+            <div class="col-7 col-lg-3">
+                <a class="navbar-brand" href="#">
+                    <img src="images/logo.svg" width="60" height="60" alt="">
+                </a>
+            </div>
+            <div class="col-lg-6 d-none d-lg-block">
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">最新消息</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                申請通報
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
+                                <a class="dropdown-item" href="#">快速揪團</a>
+                                <a class="dropdown-item" href="#">創建活動</a>
+                                <a class="dropdown-item" href="#">加入活動</a>
+                                <a class="dropdown-item" href="#">髒亂通報</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                活動成果
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+                                <a class="dropdown-item" href="#">活動相簿</a>
+                                <a class="dropdown-item" href="#">活動報告</a>
+
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">關於我們</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPages" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                會員專區
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPages">
+                                <a class="dropdown-item" href="memberIndex.html">會員首頁</a>
+                                <a class="dropdown-item" href="memberEdit.html">會員資料</a>
+                                <a class="dropdown-item" href="memberPassword.html">修改密碼</a>
+                                <a class="dropdown-item" href="memberEvent.html">活動管理</a>
+                                <a class="dropdown-item" href="memberMessy.html">通報管理</a>
+                                <a class="dropdown-item" href="memberPoints.html">積分兌換</a>
+
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+            <div class="col-5 col-lg-3">
+                <span>
+                    <a class="navbar-brand" href="#">
+                        <i class="icofont-login"></i>
+                    </a>
+                </span>
+
+            </div>
+        </nav>
+
+
+
+    </header>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <section>
+            <!-- Content Row -->
+            <div class="row">
+                <!-- 側邊攔 Sidebar Column -->
+                <div class="col-lg-2 mb-5 mt-5">
+                    <div class="list-group ">
+                        <a href="memberIndex.html" class="list-group-item "><i class="icofont-home"></i>會員首頁</a>
+                        <a href="memberEdit.html" class="list-group-item"><i class="icofont-birthday-cake"></i>會員資料</a>
+                        <a href="memberPassword.html" class="list-group-item"><i class="icofont-key"></i>修改密碼</a>
+                        <a href="memberEvent.html" class="list-group-item"><i class="icofont-bullhorn"></i>活動管理</a>
+                        <a href="memberMessy.html" class="list-group-item"><i class="icofont-alarm"></i>通報管理</a>
+                        <a href="memberPoints.html" class="list-group-item active"><i class="icofont-gift"></i>積分兌換</a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- 內容 Content Column -->
+                <div class="content col-lg-10 mb-4 p-5">
+
+                    <!-- 會員目前積分和積分說明 -->
+
+
+                    <div class="row ">
+                        <div class="card col-12 col-md-5">
+                            <div class="card-body text-center">
+
+                                <h2 class="">5000</h2>
+                                <p>目前積分</p>
+
+                            </div>
+
+                        </div>
+
+                        <div class="card col-12 col-md-7 ">
+                            <div class="card-body text-center">
+
+                                <h4 class="">積分兌換說明</h4>
+                                <p px-5>每成功參加與發起一場活動獲得多少積分，
+                                    您可使用會員積分兌換以下商品，
+                                    點選兌換商品後將扣除會員積分，
+                                    商品條碼於60秒內有效。
+                                    注意！點數無法轉讓或贈予他人。</p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!--積分兌換-->
+
+                    <div class="row mt-5">
+                        <h2 class="col-12 text-center"><i class="icofont-gift"></i>積分兌換</h2>
+                        <!-- 可以兌換的商品區塊 (需要的積分少的放前面) 目前第一個卡片用大的卡片(主推商品、主要贊助用大的卡片)-->
+                        <!-- 商品卡片: 圖片+商品標題+剩餘組數+兌換按鈕 
+
+                       點擊圖片與商品標題會跳出商品介紹頁面(圖片+標題+商品內容說明+兌換注意事項)
+                       一樣10筆分頁
+                       參考MOMO購物網點數兌換&全家點數兌換 -->
+                       
+                            <div class="card pdCard col-12 col-md-12">
+
+                                <div class="row no-gutters">
+                                    <div class="col-md-6">
+
+                                        <a href="#"> <img src="images/kfc.jpg" class="card-img" alt="..."></a>
+
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card-body">
+                                            <a href="">
+                                                <h4 class="card-title">肯德基Happy牛Year套餐</h4>
+                                            </a>
+                                            <h3 class="card-title"><i class="icofont-gift"></i>500點</h3>
+                                            <p class="card-text"><small class="text-muted">剩餘 50 組</small></p>
+
+
+                                            <button type="button"
+                                                class="btn btn-info btn-circle btn-block">點我兌換</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card  pdCard col-12 col-md-6">
+
+                                <div class="row no-gutters">
+                                    <div class="col-md-6">
+
+                                        <a href="#"> <img src="images/kfc.jpg" class="card-img" alt="..."></a>
+
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card-body">
+                                            <a href="">
+                                                <h4 class="card-title">肯德基Happy牛Year套餐</h4>
+                                            </a>
+                                            <div class="d-flex w-100 justify-content-between">
+                                                <h3 class="card-title"><i class="icofont-gift"></i>500點</h3>
+                                                <p class="card-text"><small class="text-muted">剩餘 50 組</small></p>
+
+                                            </div>
+
+
+                                            <button type="button"
+                                                class="btn btn-info btn-circle btn-block">點我兌換</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card  pdCard col-12 col-md-6">
+
+                                <div class="row no-gutters">
+                                    <div class="col-md-6">
+
+                                        <a href="#"> <img src="images/noodles.jpg " class="card-img" alt="..."></a>
+
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card-body">
+                                            <a href="">
+                                                <h4 class="card-title">曾拌麵
+                                                    香蔥椒麻/麻油椒香/胡麻醬香(4包/袋)</h4>
+                                            </a>
+                                            <div class="d-flex w-100 justify-content-between">
+                                                <h3 class="card-title"><i class="icofont-gift"></i>5000點</h3>
+                                                <p class="card-text"><small class="text-muted">剩餘 50 組</small></p>
+
+                                            </div>
+
+                                            <button type="button"
+                                                class="btn btn-info btn-circle btn-block">點我兌換</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card  pdCard col-12 col-md-6">
+
+                                <div class="row no-gutters">
+                                    <div class="col-md-6">
+
+                                        <a href="#"> <img src="images/kfc.jpg" class="card-img" alt="..."></a>
+
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card-body">
+                                            <a href="">
+                                                <h4 class="card-title">肯德基Happy牛Year套餐</h4>
+                                            </a>
+                                            <div class="d-flex w-100 justify-content-between">
+                                                <h3 class="card-title"><i class="icofont-gift"></i>500點</h3>
+                                                <p class="card-text"><small class="text-muted">剩餘 50 組</small></p>
+
+                                            </div>
+
+
+                                            <button type="button"
+                                                class="btn btn-info btn-circle btn-block">點我兌換</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card  pdCard col-12 col-md-6">
+
+                                <div class="row no-gutters">
+                                    <div class="col-md-6">
+
+                                        <a href="#"> <img src="images/noodles.jpg " class="card-img" alt="..."></a>
+
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card-body">
+                                            <a href="">
+                                                <h4 class="card-title">曾拌麵
+                                                    香蔥椒麻/麻油椒香/胡麻醬香(4包/袋)</h4>
+                                            </a>
+                                            <div class="d-flex w-100 justify-content-between">
+                                                <h3 class="card-title"><i class="icofont-gift"></i>5000點</h3>
+                                                <p class="card-text"><small class="text-muted">剩餘 50 組</small></p>
+
+                                            </div>
+
+                                            <button type="button"
+                                                class="btn btn-info btn-circle btn-block">點我兌換</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card  pdCard col-12 col-md-6">
+
+                                <div class="row no-gutters">
+                                    <div class="col-md-6">
+
+                                        <a href="#"> <img src="images/kfc.jpg" class="card-img" alt="..."></a>
+
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card-body">
+                                            <a href="">
+                                                <h4 class="card-title">肯德基Happy牛Year套餐</h4>
+                                            </a>
+                                            <div class="d-flex w-100 justify-content-between">
+                                                <h3 class="card-title"><i class="icofont-gift"></i>500點</h3>
+                                                <p class="card-text"><small class="text-muted">剩餘 50 組</small></p>
+
+                                            </div>
+
+
+                                            <button type="button"
+                                                class="btn btn-info btn-circle btn-block">點我兌換</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card  pdCard col-12 col-md-6">
+
+                                <div class="row no-gutters">
+                                    <div class="col-md-6">
+
+                                        <a href="#"> <img src="images/noodles.jpg " class="card-img" alt="..."></a>
+
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card-body">
+                                            <a href="">
+                                                <h4 class="card-title">曾拌麵
+                                                    香蔥椒麻/麻油椒香/胡麻醬香(4包/袋)</h4>
+                                            </a>
+                                            <div class="d-flex w-100 justify-content-between">
+                                                <h3 class="card-title"><i class="icofont-gift"></i>5000點</h3>
+                                                <p class="card-text"><small class="text-muted">剩餘 50 組</small></p>
+
+                                            </div>
+
+                                            <button type="button"
+                                                class="btn btn-info btn-circle btn-block">點我兌換</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card  pdCard col-12 col-md-6">
+
+                                <div class="row no-gutters">
+                                    <div class="col-md-6">
+
+                                        <a href="#"> <img src="images/kfc.jpg" class="card-img" alt="..."></a>
+
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card-body">
+                                            <a href="">
+                                                <h4 class="card-title">肯德基Happy牛Year套餐</h4>
+                                            </a>
+                                            <div class="d-flex w-100 justify-content-between">
+                                                <h3 class="card-title"><i class="icofont-gift"></i>500點</h3>
+                                                <p class="card-text"><small class="text-muted">剩餘 50 組</small></p>
+
+                                            </div>
+
+
+                                            <button type="button"
+                                                class="btn btn-info btn-circle btn-block">點我兌換</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card  pdCard col-12 col-md-6">
+
+                                <div class="row no-gutters">
+                                    <div class="col-md-6">
+
+                                        <a href="#"> <img src="images/noodles.jpg " class="card-img" alt="..."></a>
+
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card-body">
+                                            <a href="">
+                                                <h4 class="card-title">曾拌麵
+                                                    香蔥椒麻/麻油椒香/胡麻醬香(4包/袋)</h4>
+                                            </a>
+                                            <div class="d-flex w-100 justify-content-between">
+                                                <h3 class="card-title"><i class="icofont-gift"></i>5000點</h3>
+                                                <p class="card-text"><small class="text-muted">剩餘 50 組</small></p>
+
+                                            </div>
+
+                                            <button type="button"
+                                                class="btn btn-info btn-circle btn-block">點我兌換</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                       
+                    </div>
+
+
+                    <!-- 分頁按鈕 -->
+                    <nav aria-label="Page navigation example" class="mt-5">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">4</a></li>
+                            <li class="page-item"><a class="page-link" href="#">5</a></li>
+                            <li class="page-item"><a class="page-link" href="#">6</a></li>
+                            <li class="page-item"><a class="page-link" href="#">7</a></li>
+                            <li class="page-item"><a class="page-link" href="#">8</a></li>
+                            <li class="page-item"><a class="page-link" href="#">9</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+
+                            </li>
+                        </ul>
+                    </nav>
+
+
+
+                </div>
+            </div>
+
+
+
+    </div>
+    </div>
+
+    </div>
+    </div>
+    <!-- /.row -->
+    </section>
+
+
+
+    </div>
+    <!-- /.container -->
+
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <div class="m-0 text-center">
+                <button type="button" class="m-2 btn btn-lg btn-outline-info  btn-circle"><i
+                        class="icofont-envelope"></i></button>
+                <button type="button" class="m-2 btn btn-lg btn-outline-info  btn-circle"><i
+                        class="icofont-facebook"></i></button>
+                <button type="button" class="m-2 btn btn-lg btn-outline-info  btn-circle"><i
+                        class="icofont-envelope"></i></button>
+
+            </div>
+        </div>
+        </div>
+        <div class="container">
+            <p class="mt-4 text-center text-white">Copyright &copy; E7PN 2021</p>
+        </div>
+        <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

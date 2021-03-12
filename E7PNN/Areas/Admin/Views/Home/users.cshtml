@@ -1,0 +1,92 @@
+﻿@model IEnumerable<E7PNN.Models.UserTb>
+@{
+    ViewBag.Title = "users";
+}
+
+<div class="content-wrapper">
+    <div class="content-wrapper-before"></div>
+    <div class="content-header row">
+        <div class="content-header-left col-md-4 col-12 mb-2">
+            <h3 class="content-header-title">會員管理</h3>
+        </div>
+        <div class="content-header-right col-md-8 col-12">
+            <div class="breadcrumbs-top float-md-right">
+                <div class="breadcrumb-wrapper mr-1">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href='@Url.Action("Index", "Home")'>洞察報告</a>
+                        </li>
+                        <li class="breadcrumb-item active">
+                            會員管理
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 會員資料 start -->
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">會員資料</h4>
+                        <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                        <div class="heading-elements">
+                            <ul class="list-inline mb-0">
+                                <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+                                <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+                                <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+                                <li><a data-action="close"><i class="ft-x"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-content collapse show">
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead class="thead">
+                                    <tr>
+                                        
+                                        <th scope="col">會員編號</th>
+                                        <th scope="col">會員姓名</th>
+                                        <th scope="col">身分</th>
+                                        <th scope="col">狀態</th>
+                                        <th scope="col">加入時間</th>
+                                        <th scope="col">編輯</th>
+                                        <th scope="col">寄信</th>
+                                        <th scope="col">詳細資料</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                    <tr>
+                                        <td>@Html.DisplayFor(modelItem => item.ID)</td>
+                                        <td>@Html.DisplayFor(modelItem => item.Name)</td>
+                                        <td>@Html.DisplayFor(modelItem => item.Iden_ID)</td>
+                                        <td>@Html.DisplayFor(modelItem => item.Status)</td>
+                                        <td>@Html.DisplayFor(modelItem => item.CreateDate)</td>
+                                       @* <td> @Html.ActionLink("ee", "Useredit",new { id=item.ID})</td>*@
+                                        <td> <a href="@Url.Action(  "Useredit", "Home", new { id=item.ID})"><i class='la la-edit'></i></a></td>
+                                        <td><button type="button" class="btn btn-link"><i class="la la-envelope"></i></button></td>
+                                        <td> <a href="@Url.Action(  "Userdetails", "Home", new { id=item.ID})"><i class='la la-file-text'></i></a></td>
+                                    </tr>
+                                    }
+                                    </tbody>
+                            </table>
+                        </div>
+                        <div class="btn-group" role="group" aria-label="btn col-1" style="bottom:10px;">
+                            <button type="button" class="btn btn-link"><span style="color:#0D2340;"><i class="la la-angle-double-left"></i></span></button>
+                            <button type="button" class="btn btn-link"><span style="color:#0D2340;">1</span></button>
+                            <button type="button" class="btn btn-link"><span style="color:#0D2340;">2</span></button>
+                            <button type="button" class="btn btn-link"><span style="color:#0D2340;">3</span></button>
+                            <button type="button" class="btn btn-link"><span style="color:#0D2340;">4</span></button>
+                            <button type="button" class="btn btn-link"><span style="color:#0D2340;">5</span></button>
+                            <button type="button" class="btn btn-link"><span style="color:#0D2340;"><i class="la la-angle-double-right"></i></span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 會員資料 end -->
+    </div>
+

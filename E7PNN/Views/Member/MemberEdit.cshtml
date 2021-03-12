@@ -1,0 +1,146 @@
+﻿@model E7PNN.Models.ViewModel.UpdateUserVm
+
+@{
+    ViewBag.Title = "MemberEdit";
+}
+
+<!-- Page Content -->
+<div class="container">
+
+    <div class="content-header row">
+        <div class="content-header-left col-md-4 col-12 mb-2">
+            <h3 class="content-header-title">00000</h3>
+        </div>
+    </div>
+
+    <!-- Content Row -->
+    <div class="row mt-5">
+        <!-- 側邊攔 Sidebar Column -->
+        <div class="col-lg-2 mb-5 mt-5">
+            @{
+                Html.RenderAction("Sidebar", "Member");
+            }
+        </div>
+        <!-- 內容 Content Column -->
+        <div class="content col-lg-10 mb-4 ">
+
+
+
+            <!-- 編輯會員個人資料 -->
+
+            <form class="mt-5 row was-validated p-5"action="~/Member/MemberUpate" method="post" enctype="multipart/form-data">
+
+                <!-- 文字表格區 -->
+                <div class="col-12 col-md-8 px-5">
+
+
+                    <div class="form-group row">
+                        <label for="inputRealName" class="col-sm-2 col-form-label">
+                            <i class="icofont-user-alt-7"></i>姓名
+                        </label>
+                        <div class="col-sm-10">
+                            @Html.TextBoxFor(m => m.Fullname, new { @value="", @Required = "required", @Name = "Fullname",@class= "form-control is-valid",@Id= "inputRealName", @type = "text", @placeholder = "請輸入真實姓名"})
+                        </div>
+                        <div class="invalid-feedback">
+
+                        </div>
+
+
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputNickName" class="col-sm-2 col-form-label">
+                            <i class="icofont-id"></i>暱稱
+                        </label>
+                        <div class="col-sm-10">
+                            @Html.TextBoxFor(m => m.NiName, new {@Name = "NiName", @class = "form-control is-valid", @Id = "inputNickName", @type = "text", @placeholder = "選填" })
+                        </div>
+
+
+
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputEmail" class="col-sm-2 col-form-label">
+                            <i class="icofont-envelope"></i>信箱
+                        </label>
+                        <div class="col-sm-10">
+                            @Html.TextBoxFor(m => m.Email, new { @Required = "required", @Name = "Email", @class = "form-control is-valid", @Id = "inputEmail", @type = "Email", @placeholder = "請輸入聯絡信箱" })
+                        </div>
+
+
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputPhoneNumber" class="col-sm-2 col-form-label">
+                            <i class="icofont-phone"></i>電話
+                        </label>
+                        <div class="col-sm-10">
+                            @Html.TextBoxFor(m => m.Phone, new { @Required = "required", @Name = "Phone", @class = "form-control is-valid", @Id = "inputPhone", @type = "text", @placeholder = "請輸入電話號碼" })
+                        </div>
+
+
+
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputBitthday" class="col-sm-2 col-form-label">
+                            <i class="icofont-birthday-cake"></i>生日
+                        </label>
+                        <div class="col-sm-10">
+                            @Html.TextBoxFor(m => m.Bireday, new { @Required = "required", @Name = "Bireday", @class = "form-control is-valid", @Id = "inputBitthday", @type = "date", @placeholder = "請輸入生日" })
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="form-group row">
+                        <label for="inputBitthday" class="col-sm-2 col-form-label">
+                            <i class="icofont-star"></i>性別
+                        </label>
+                        <div class="col-sm-10">
+                            @Html.DropDownListFor(m => m.Sex, (IEnumerable<SelectListItem>)ViewBag.SelectSite, new { @Name = "Sex", @class = "custom-select" })
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- 修改個人頭像區 -->
+
+                <div class="col-12 col-md-4 px-5">
+                    <div class="row form-group  align-items-center">
+                        <label for="inputImage" class="col-sm-12 col-form-label">
+                        </label>
+
+                        <!-- 上傳圖片後圖片顯示在這(大頭貼) -->
+                        <div class="imgBox2">
+                            <img src="~/images/user.jpg" class=" justify-content-center mr-5 rounded-circle" alt="...">
+                        </div>
+
+
+                        <div class="col-sm-12 mt-5">
+                            <div class="custom-file">
+                                @Html.TextBoxFor(m => m.Photo, new {@class= "custom-file-input", @Name = "Photo", type = "file", placeholder = Html.DisplayNameFor(m => m.Photo) })
+                                <label class="custom-file-label" for="customFile">檔案名稱</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group col-12 mt-5">
+                    <div>
+                        <button type="submit" class="btn btn-info  btn-block">確認修改</button>
+                    </div>
+                </div>
+            </form>
+
+
+
+
+
+
+        </div>
+
+
+
+    </div>
+</div>
+
+

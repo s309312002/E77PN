@@ -1,0 +1,81 @@
+﻿
+@{
+    ViewBag.Title = "MePoints";
+}
+
+<!-- Page Content -->
+<div class="container">
+
+    <div class="content-header row">
+        <div class="content-header-left col-md-4 col-12 mb-2">
+            <h3 class="content-header-title">00000</h3>
+        </div>
+    </div>
+   
+        <!-- Content Row -->
+        <div class="row mt-5">
+            <!-- 側邊攔 Sidebar Column -->
+            <div class="col-lg-2 mb-5 mt-5">
+                @{
+                    Html.RenderPartial("Sidebar");
+                }
+            </div>
+
+
+            <!-- 內容 Content Column -->
+            <div class="content col-lg-10 mb-4 p-5">
+
+                <!-- 會員目前積分和積分說明 -->
+
+
+                <div>
+                    @{
+                        Html.RenderPartial("CurrentPoints");
+                    }
+                </div>
+
+
+
+                <!--積分兌換-->
+
+                <div>
+                    @{
+                        Html.RenderPartial("RedeemPoints");
+                    }
+                </div>
+
+
+                <!-- 分頁按鈕 -->
+                <nav aria-label="Page navigation example" class="mt-5">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                        <li class="page-item"><a class="page-link" href="#">6</a></li>
+                        <li class="page-item"><a class="page-link" href="#">7</a></li>
+                        <li class="page-item"><a class="page-link" href="#">8</a></li>
+                        <li class="page-item"><a class="page-link" href="#">9</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+
+                        </li>
+                    </ul>
+                </nav>
+
+
+
+            </div>
+        </div>
+
+
+
+</div>

@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div id="banner" class=" d-flex align-items-center justify-content-center row text-center">
+
+    <div style="width: 100%;height: 800px; top: -100px;background-image: url('../../images/turtle01.jpg');background-size: cover;">
+        <h3 class="typewriter col-12">E7PN</h3>
+        <h4 class="typewriter">一起揪團做環保</h4>
+    </div>
+
+</div>
+
+<div>
+    @{
+        Html.RenderAction("Recent", "Home");
+    }
+</div>
+
+<div>
+    @{
+        Html.RenderAction("Notice", "Home");
+    }
+</div>
+
+@*@<div>
+        @{
+            Html.RenderAction("Ranking", "Home");
+        }
+    </div>*@
+
+<div>
+    @{
+        Html.RenderAction("Questions", "Home");
+    }
+</div>
+
+<div>
+    @{
+        Html.RenderAction("Contacts", "Home");
+    }
+</div>
+
+

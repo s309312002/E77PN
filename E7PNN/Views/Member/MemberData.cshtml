@@ -1,0 +1,57 @@
+﻿@model E7PNN.Models.UserTb
+
+<!-- 會員個人資料 -->
+
+<div class="row mt-5">
+    <div class="media col-12 col-md-12">
+
+        <div class="media">
+            <div class="imgBox1">
+                <img src="~/images/user.jpg" class="align-self-center mr-5 rounded-circle" alt="...">
+            </div>
+
+            <div class="media-body">
+                <h3 class="mt-0 mr-3">
+
+                    @Html.DisplayFor(m => m.Name)
+                    @Html.HiddenFor(m => m.ID)
+
+
+                    @*使用者暱稱使用者暱稱*@
+                </h3>
+
+
+                <h4 class="mt-0">
+                    <i class="icofont-leaf"></i>
+                    <span>會員等級</span>
+                    <span>
+
+                        @Html.DisplayFor(m => m.Exp)
+
+                    </span>
+                </h4>
+                <h4 class="mt-0">
+                    <i class="icofont-gift"></i>
+                    <span>會員積分</span>
+                    <span>
+
+                        @Html.DisplayFor(m => m.Points)
+
+                    </span>
+                </h4>
+            </div>
+
+            <a type="button"
+               class=" btn btn-sm btn-outline-info  "
+               href='@Url.Action("memberEdit", "Member")'>
+                <i class="icofont-edit"></i>修改會員資料
+            </a>
+
+
+
+        </div>
+
+    </div>
+
+
+</div>

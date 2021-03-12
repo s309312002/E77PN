@@ -1,0 +1,51 @@
+﻿@model E7PNN.Models.ViewModel.Test2Vm
+
+<!-- 修改個人頭像區 -->
+
+
+<p>
+    註冊/登入即代表您同意遵守
+    <a href="terms.html">E7PN 使用協議</a>
+</p>
+<p>
+    註冊/登入即代表您同意遵守
+    <a href="terms.html">E7PN 使用協議</a>
+</p>
+<p>
+    註冊/登入即代表您同意遵守
+    <a href="terms.html">E7PN 使用協議</a>
+</p>
+<p>
+    註冊/登入即代表您同意遵守
+    <a href="terms.html">E7PN 使用協議</a>
+</p>
+<p>
+    註冊/登入即代表您同意遵守
+    <a href="terms.html">E7PN 使用協議</a>
+</p>
+<form id="form_signup" action="~/Test2/UpJpgg" method="post" enctype="multipart/form-data">
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary("", new { })
+    <div class="field">
+        @Html.TextBoxFor(m => m.Pic2, new { @Name = "Pic2", @type = "file", @placeholder = "再次輸入密碼" })
+        @Html.LabelFor(m => m.Pic2, new { @for = "anpassword" })
+    </div>
+    <div class="field">
+        @Html.TextBoxFor(m => m.Files, new { @Name = "Files", type = "file", placeholder = Html.DisplayNameFor(m => m.Pic1) })
+        @Html.LabelFor(m => m.Files, new { @for = "anpassword" })
+    </div>
+    <div class="field">
+        @Html.TextBoxFor(m => m.Files, new { @Name = "Files", type = "file", placeholder = Html.DisplayNameFor(m => m.Pic1) })
+        @Html.LabelFor(m => m.Files, new { @for = "anpassword" })
+    </div>
+    <button class="btn_signup" type="submit" value="signup">
+        註冊
+    </button>
+
+</form>
+
+<link href="@Url.Content("~/Content/11_css/login_signup_forget/login.css")" rel="stylesheet" type="text/css" />
+
+@*<link href="@Url.Content("~/Content/css/login.css")" rel="stylesheet" type="text/css" />*@
+
+<link href="@Url.Content("~/Content/11_css/login_signup_forget/login.css")" rel="stylesheet" type="text/css" />

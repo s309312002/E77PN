@@ -1,0 +1,106 @@
+﻿@model E7PNN.Models.UserTb
+
+@{
+    ViewBag.Title = "Userdetails";
+}
+
+<div class="content-wrapper">
+    <div class="content-wrapper-before"></div>
+    <div class="content-header row">
+        <div class="content-header-left col-md-4 col-12 mb-2">
+            <h3 class="content-header-title">會員詳細資料</h3>
+        </div>
+        <div class="content-header-right col-md-8 col-12">
+            <div class="breadcrumbs-top float-md-right">
+                <div class="breadcrumb-wrapper mr-1">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href='@Url.Action("users", "Home")'>會員管理</a>
+                        </li>
+                        <li class="breadcrumb-item active">
+                            會員詳細資料
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 會員詳細資料 start -->
+    <div class="row">
+        <div class="col-12">
+            <div class="card" style="max-width:600px;text-align:center;font-weight:700;margin:auto;">
+                <div class="card-header">
+                    <h4 class="card-title">會員資料</h4>
+                    <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                    <div class="heading-elements">
+                        <ul class="list-inline mb-0">
+                            <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+                            <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+                            <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+                            <li><a data-action="close"><i class="ft-x"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-content collapse show">
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead class="thead">
+                                <tr>
+                                    <td>@Html.DisplayNameFor(model => model.Name)</td>
+                                    <td>@Html.DisplayFor(model => model.Name)</td>
+                                </tr>
+                                <tr>
+                                    <td>@Html.DisplayNameFor(model => model.UserNember)</td>
+                                    <td>@Html.DisplayFor(model => model.UserNember)</td>
+                                </tr>
+                                <tr>
+                                    <td>@Html.DisplayNameFor(model => model.MiNember)</td>
+                                    <td>@Html.DisplayFor(model => model.MiNember)</td>
+                                </tr>
+                                <tr>
+                                    <td>@Html.DisplayNameFor(model => model.Status)</td>
+                                    <td>@Html.DisplayFor(model => model.Status)</td>
+                                </tr>
+                                <tr>
+                                    <td>@Html.DisplayNameFor(model => model.Email)</td>
+                                    <td>@Html.DisplayFor(model => model.Email)</td>
+                                </tr>
+                                <tr>
+                                    <td>@Html.DisplayNameFor(model => model.Points)</td>
+                                    <td>@Html.DisplayFor(model => model.Points)</td>
+                                </tr>
+                                <tr>
+                                    <td>@Html.DisplayNameFor(model => model.Phone)</td>
+                                    <td>@Html.DisplayFor(model => model.Phone)</td>
+                                </tr>
+                                <tr>
+                                    <td>@Html.DisplayNameFor(model => model.UserText)</td>
+                                    <td>@Html.DisplayFor(model => model.UserText)</td>
+                                </tr>
+                                <tr>
+                                    <td>@Html.DisplayNameFor(model => model.Sex)</td>
+                                    <td>@Html.DisplayFor(model => model.Sex)</td>
+                                </tr>
+                                <tr>
+                                    <td>@Html.DisplayNameFor(model => model.Niname)</td>
+                                    <td>@Html.DisplayFor(model => model.Niname)</td>
+                                </tr>
+                                <tr>
+                                    <td>@Html.DisplayNameFor(model => model.CreateDate)</td>
+                                    <td>@Html.DisplayFor(model => model.CreateDate)</td>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+                <div>
+                    <p>
+                        <i class='la la-edit'></i>@Html.ActionLink("編輯", "Useredit", new { id = Model.ID }) |
+                        <i class='la la-external-link'></i>@Html.ActionLink("回上一頁", "users")
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 會員詳細資料 end -->
+</div>

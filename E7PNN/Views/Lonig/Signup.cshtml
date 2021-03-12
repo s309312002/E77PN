@@ -1,0 +1,64 @@
+﻿@model E7PNN.Models.ViewModel.SignupVm
+
+<div id="banner" class=" d-flex align-items-center justify-content-center row text-center">
+
+    <div style="width: 100%;height: 1000px; top: -100px;background-image: url('../../images/turtle01.jpg');background-size: cover;">
+
+    </div>
+
+</div>
+
+<div class="row">
+    <div class="frame">
+
+        <div id="image_logo">
+            <a href="index.html"> <img src="~/images/logo.svg"></a>
+        </div>
+
+        <!-- 註冊表單 使用信箱密碼 -->
+        <form id="form_signup" action="~/Lonig/Signup" method="post">
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary("", new { })
+            <div class="field">
+                @Html.TextBoxFor(m => m.Fullname, new { @Name = "fullname", @placeholder = "王小明（務必輸入真實姓名）" })
+                @Html.LabelFor(m => m.Fullname, new { @for = "name" })
+                <!--<label for="name">姓名</label>-->
+            </div>
+            <div class="field">
+                @Html.TextBoxFor(m => m.Email, new { @Name = "email", @placeholder = "e7pn@example.com", @type = "email" })
+                @Html.LabelFor(m => m.Email, new { @for = "email" })
+            </div>
+
+            <div class="field">
+                @Html.TextBoxFor(m => m.Password, new { @Name = "password", @placeholder = "輸入密碼", @type = "password" })
+                @Html.LabelFor(m => m.Password, new { @for = "password" })
+            </div>
+            <div class="field">
+                @Html.TextBoxFor(m => m.Password_pass, new { @Name = "password_pass", @type = "password", @placeholder = "再次輸入密碼" })
+                @Html.LabelFor(m => m.Password_pass, new { @for = "anpassword" })
+            </div>
+
+            <button class="btn_signup" type="submit" value="signup">
+                註冊
+            </button>
+
+        </form>
+
+        <!-- 登入 -->
+
+        <button class="btn_login" type="button" value="login" onclick="window.location='login.html'">已經有帳號了嗎？點此登入</button>
+        <!-- 個資協議 -->
+        <p>
+            註冊/登入即代表您同意遵守
+            <a href="terms.html">E7PN 使用協議</a>
+        </p>
+
+
+    </div>
+</div>
+
+@section scripts{
+    <link href="@Url.Content("~/Content/11_css/login_signup_forget/signup.css")" rel="stylesheet" type="text/css" />
+    <script src="@Url.Content("~/Scripts/CustomJs/signup.js")"></script>
+
+}

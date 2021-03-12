@@ -1,0 +1,110 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="content-wrapper">
+    <div class="content-wrapper-before"></div>
+    <div class="content-header row"></div>
+    <!-- 圖表 start -->
+    <div class="content-body">
+        <div class="row match-height">
+            <div class="col-12">
+                <img src="~/FrontEnd/fish3.png" style="width:100%;" />
+            </div>
+        </div>
+        <!-- 圖表 end -->
+        <!-- 次數統計 start -->
+        <div class="row">
+            <div class="col-xl-4 col-lg-6 col-md-12">
+                <div class="card pull-up ecom-card-1 bg-white">
+                    <div class="card-content ecom-card2 height-180 grid-width-100">
+                        <h5 class="text-muted danger position-absolute p-1">網頁瀏覽次數</h5>
+                        <div>
+                            <i class="ft-activity danger font-large-1 float-right p-1"></i>
+                        </div>
+                        <div class="progress-stats-container ct-golden-section height-75 position-relative pt-3  ">
+                            <div id="progress-stats-bar-chart"></div>
+                            <div id="progress-stats-line-chart" class="progress-stats-shadow"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-12">
+                <div class="card pull-up ecom-card-1 bg-white">
+                    <div class="card-content ecom-card2 height-180">
+                        <h5 class="text-muted info position-absolute p-1">網頁分享次數</h5>
+                        <div>
+                            <i class="ft-activity info font-large-1 float-right p-1"></i>
+                        </div>
+                        <div class="progress-stats-container ct-golden-section height-75 position-relative pt-3">
+                            <div id="progress-stats-bar-chart1"></div>
+                            <div id="progress-stats-line-chart1" class="progress-stats-shadow"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-12">
+                <div class="card pull-up ecom-card-1 bg-white">
+                    <div class="card-content ecom-card2 height-180">
+                        <h5 class="text-muted warning position-absolute p-1">近1個禮拜產品使用率</h5>
+                        <div>
+                            <i class="ft-activity warning font-large-1 float-right p-1"></i>
+                        </div>
+                        <div class="progress-stats-container ct-golden-section height-75 position-relative pt-3">
+                            <div id="progress-stats-bar-chart2"></div>
+                            <div id="progress-stats-line-chart2" class="progress-stats-shadow"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-12">
+                <div class="card pull-up ecom-card-1 bg-white">
+                    <div class="card-content ecom-card2 height-180">
+                        <h5 class="text-muted danger position-absolute p-1">會員活耀度</h5>
+                        <div>
+                            <i class="ft-activity danger font-large-1 float-right p-1"></i>
+                        </div>
+                        <div class="progress-stats-container ct-golden-section height-75 position-relative pt-3  ">
+                            <div id="progress-stats-bar-chart3"></div>
+                            <div id="progress-stats-line-chart3" class="progress-stats-shadow"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-12">
+                <div class="card pull-up ecom-card-1 bg-white">
+                    <div class="card-content ecom-card2 height-180">
+                        <h5 class="text-muted info position-absolute p-1">活動發布次數</h5>
+                        <div>
+                            <i class="ft-activity info font-large-1 float-right p-1"></i>
+                        </div>
+                        <div class="progress-stats-container ct-golden-section height-75 position-relative pt-3">
+                            <div id="progress-stats-bar-chart4"></div>
+                            <div id="progress-stats-line-chart4" class="progress-stats-shadow"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-12">
+                <div class="card pull-up ecom-card-1 bg-white">
+                    <div class="card-content ecom-card2 height-180">
+                        <h5 class="text-muted warning position-absolute p-1">髒亂通報次數</h5>
+                        <div>
+                            <i class="ft-activity warning font-large-1 float-right p-1"></i>
+                        </div>
+                        <div class="progress-stats-container ct-golden-section height-75 position-relative pt-3">
+                            <div id="progress-stats-bar-chart5"></div>
+                            <div id="progress-stats-line-chart5" class="progress-stats-shadow"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 次數統計 end -->
+    </div>
+</div>
+
+@section scripts{
+    <script src="@Url.Content("~/Scripts/Chart.min.js")"></script>
+    <script src="@Url.Content("~/FrontEnd/theme-assets/js/scripts/pages/dashboard-lite.js")"></script>
+}

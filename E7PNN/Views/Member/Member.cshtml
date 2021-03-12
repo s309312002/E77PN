@@ -1,0 +1,71 @@
+﻿
+@{
+    ViewBag.Title = "Member";
+}
+
+<section>
+    <div class="row  mt-5 ml-5" >
+        <!-- 側邊攔 Sidebar Column -->
+        <div class="col-2 mb-5 mt-5">
+            @{
+                Html.RenderAction("Sidebar", "Member");
+            }
+        </div>
+
+
+
+        <!-- 會員首頁 -->
+        <!-- Page Content -->
+        @*<div class="container">*@
+
+
+        <!-- Content Row -->
+        <!-- 內容 Content Column -->
+        <div class="content col-lg-8 mb-4 p-5">
+
+            <!-- 會員個人資料 -->
+
+            <div>
+                @{
+                    Html.RenderAction("MemberData", "Member");
+                }
+            </div>
+
+
+            <div>
+                @{
+                    Html.RenderAction("MemberAct", "Member");
+                }
+            </div>
+
+
+            <!-- 發起活動場數等等 -->
+            <!-- 我的足跡 -->
+
+            <div class="row mt-5 p-5">
+                <!-- 地圖區塊-->
+                <div class="col-lg-8 mb-4">
+                    @{
+                        Html.RenderAction("Map", "Member");
+                    }
+                </div>
+
+                <!-- 依照時間先後排序足跡 新的放前面-->
+
+                <div class="col-lg-4 mb-4 ">
+                    @{
+                        Html.RenderAction("Mefoot", "Member");
+                    }
+                </div>
+
+
+            </div>
+
+
+
+        </div>
+    </div>
+
+    @*</div>*@
+
+</section>
